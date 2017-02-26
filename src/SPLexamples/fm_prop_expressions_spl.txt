@@ -1,0 +1,8 @@
+ExpressionsSPL &
+(Data <=> ExpressionsSPL) &
+(Operations <=> ExpressionsSPL) &
+(Lit <=> Data) &
+(Add => Data) &
+(Subtract => Data) &
+(Print <=> Operations) &
+(Eval => Operations)
