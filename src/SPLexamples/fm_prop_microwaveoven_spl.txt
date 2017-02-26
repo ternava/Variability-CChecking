@@ -1,0 +1,23 @@
+MicrowaveOven & (DisplayUnit <=> MicrowaveOven) & (Keypad <=> MicrowaveOven) &
+(HeatingElement <=> MicrowaveOven) &
+(DoorSensor <=> MicrowaveOven) &
+(Timer <=> MicrowaveOven) &
+(Light => MicrowaveOven) &
+(WeightSensor <=> MicrowaveOven) &
+(Beeper => MicrowaveOven) &
+(DisplayLanguage <=> MicrowaveOven) &
+(WeightSensor => (BooleanWeight | AnalogWeight)) &
+(WeightSensor => ~(BooleanWeight & AnalogWeight)) &
+(DisplayLanguage => (English | French | Spanish | German | Italian)) &
+(DisplayLanguage => ~(English & French & Spanish & German & Italian)) &
+(HeatingElement => (OneLevelHeating | MultiLevelHeating)) &
+(HeatingElement => ~(OneLevelHeating & MultiLevelHeating)) &
+(PowerLevel => Keypad) &
+(Recipe  => Keypad) &
+(MinusPlus => Keypad) &
+(TurnTable => Keypad) &
+(TODClock => Keypad) &
+(TODClock => MultiLineDisplay) & //constraints...
+(PowerLevel <=> MultiLineHeating) &
+(Recipe => MultiLineDisplay) &
+(Recipe => (AnalogWeight | MultiLevelHeating))
