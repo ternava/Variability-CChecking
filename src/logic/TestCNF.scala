@@ -1,5 +1,8 @@
 package logic
 
+import basic.{ConvertToCNF, add}
+import logic.propositional.{CNFSentence, PropositionSymbol}
+
 import scala.collection.mutable
 
 /**

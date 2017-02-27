@@ -16,6 +16,8 @@ object VariabilityModel {
   val power_set_2: ListBuffer[(VariationPoint, Mechanism, Logic, BindingTime, Evolve, Seq[Variant])] = new ListBuffer()
   val power_set_3: ListBuffer[(String, Mechanism, Logic, BindingTime, Evolve, ArrayBuffer[String])] = new ListBuffer()
 
+
+
   def add(//module: String,
           vp: VariationPoint,
           m: Mechanism,

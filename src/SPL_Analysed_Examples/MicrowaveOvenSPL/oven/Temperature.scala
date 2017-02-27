@@ -1,5 +1,5 @@
 package MicrowaveOvenSPL.oven
-
+/*
 import dsl_variability_documenting._
 
 object Variability_ModuleE {
@@ -32,7 +32,7 @@ object Variability_ModuleE {
       vp_heatingelement requires vp_temperature
     }
    /*=================================================================================*/
-}
+}*/
 
 /* Inner - technical Variation Point with variants!
  * - not shown in the specification level. */

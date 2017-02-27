@@ -14,10 +14,20 @@ private class ConvertToDimacs(val cnfSentence: CNFSentence, val map: mutable.Map
   def keyToVal = {
     //This expression will do the same mapping, too.
     //println(map.foldLeft(r3){case (s, (k,v)) => s.replaceAll(k,v.toString)})
-    """[A-Za-z]+""".r.replaceAllIn(cnfSentence.toString, m => map.getOrElse(m.group(0), m.group(0)).toString)
+    """(f_|)[A-Za-z]+""".r.replaceAllIn(cnfSentence.toString, m => map.getOrElse(m.group(0), m.group(0)).toString)
   }
 
-  val nrVariables = """[0-9]+""".r.findAllIn(keyToVal).toList.distinct.size
+  def max(xs: List[Int]): Option[Int] = xs match {
+    case Nil => None
+    case List(x: Int) => Some(x)
+    case x :: y :: rest => max( (if (x > y) x else y) :: rest )
+  }
+
+  val lst = """[0-9]+""".r.findAllIn(keyToVal).toList.map(_.toInt)
+  val nrVariables = max(lst) match {
+                      case Some(i) => i
+                      case None => 0
+                    }
   val nrLines = "&".r.findAllIn(keyToVal).toList.size + 1
 
   def writeInDimacsFormat = {
