@@ -16,17 +16,19 @@ import scala.collection.mutable
 
 object FM_moven_toCNF {
 
-  private val map = mutable.Map.empty[String, Int]
+  val map = mutable.Map.empty[String, Int]
 
-  def main(args: Array[String]): Unit = {
+  //def main(args: Array[String]): Unit = {
 
-    val theFMfile = new File(args(0))
+  def mainFM(thePLogicFile: String) = {
+
+    val theFMfile = new File(thePLogicFile)
     val source = scala.io.Source.fromFile(theFMfile)
 
     val lines = try source.mkString finally source.close()
 
     CreateVariablesForFeatures(theFMfile, map)
-    println(map) // debugging stuff....
+    println("The variables for Features are: " + map) // debugging stuff....
 
     val sentence = ConvertToCNF(lines)
     println(sentence) // debugging stuff....

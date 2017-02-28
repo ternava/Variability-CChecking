@@ -17,15 +17,16 @@ import scala.collection.mutable.ArrayBuffer
 object TVM_moven_toCNF {
 
   import basic._
-  private val map = mutable.Map.empty[String, Int]
-  private val lst: ArrayBuffer[String] = new ArrayBuffer()
+  val map = mutable.Map.empty[String, Int]
+  val lst: ArrayBuffer[String] = new ArrayBuffer()
 
-def main(args: Array[String]): Unit = {
+//def main(args: Array[String]): Unit = {
+  def mainTVM() = {
 
   /* Choose one or more TVM(s) to check! */
   import tvms._
-  //tvm_door;
-  tvm_language
+  tvm_door;
+  //tvm_language
   //tvm_temperature
 
   for(l <- asset.variant_asset_elements) {
@@ -34,7 +35,7 @@ def main(args: Array[String]): Unit = {
   println(lst) // debugging stuff...
 
   CreateVariablesForVPs(lst, map)
-  println(map) // debugging stuff...
+  println("The VPs and Vs are: " + map) // debugging stuff...
 
   val vm = VariabilityModel.get
   println(vm)// debugging stuff...

@@ -14,14 +14,12 @@ object ConvertDSLtoPLogic {
     case (a: String, b: String, c: String, d: String, e: String, y: ArrayBuffer[String], z: String)
     => {
       //s"$root"
-      val yy = y.combinations(2).toList
-      println(yy)
       (a, c, z) match {
         case (_: String, "MUL", "MND") => s"$a & ($a <=> (${y.mkString(" | ")}))"
-        case (_: String, "MUL", "OPT")  => s"($a => $root) & ($a <=> (${y.mkString(" | ")}))"
+        case (_: String, "MUL", "OPT")  => s"$root & ($a => $root) & ($a <=> (${y.mkString(" | ")}))"
         case (_: String, "ALT", "MND") => s"$a & ($a <=> (${y.mkString(" | ")})) & ${
           y.combinations(2).map { case Seq(x, y) => s"(~$x | ~$y)" }.mkString(" & ")}"
-        case (_: String, "ALT", "OPT") => s"($a => $root) & ($a <=> (${y.mkString(" | ")})) & ${
+        case (_: String, "ALT", "OPT") => s"$root & ($a => $root) & ($a <=> (${y.mkString(" | ")})) & ${
           y.combinations(2).map { case Seq(x, y) => s"(~$x | ~$y)" }.mkString(" & ")}"
         case (_: String, "ALT", "NESTED") => s"($a <=> (${y.mkString(" | ")})) & ${
           y.combinations(2).map { case Seq(x, y) => s"(~$x | ~$y)" }.mkString(" & ")}"
@@ -29,7 +27,7 @@ object ConvertDSLtoPLogic {
         case (_: String, "ALT", "TECHNICAL") => s"($a <=> (${y.mkString(" | ")})) & ${
           y.combinations(2).map { case Seq(x, y) => s"(~$x | ~$y)" }.mkString(" & ")}"
         case (_: String, "MUL", "TECHNICAL") => s"$a & ($a <=> (${y.mkString(" | ")}))"
-        case (_: String, "OPT", "") => s"($a => $root)"
+        case (_: String, "OPT", "") => s"$root & ($a => $root)"
       }
     }
 
