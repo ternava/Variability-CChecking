@@ -8,12 +8,21 @@ f_MicrowaveOven &
 (f_WeightSensor <=> f_MicrowaveOven) &
 (f_Beeper => f_MicrowaveOven) &
 (f_DisplayLanguage <=> f_MicrowaveOven) &
-(f_WeightSensor => (f_BooleanWeight | f_AnalogWeight)) &
-(f_WeightSensor => ~(f_BooleanWeight & f_AnalogWeight)) &
+(f_WeightSensor <=> (f_BooleanWeight | f_AnalogWeight)) &
+(~(f_BooleanWeight) | ~(f_AnalogWeight)) &
 (f_DisplayLanguage => (f_English | f_French | f_Spanish | f_German | f_Italian)) &
-(f_DisplayLanguage => ~(f_English & f_French & f_Spanish & f_German & f_Italian)) &
-(f_HeatingElement => (f_OneLevelHeating | f_MultiLevelHeating)) &
-(f_HeatingElement => ~(f_OneLevelHeating & f_MultiLevelHeating)) &
+(~f_English | ~f_French) &
+(~f_English | ~f_Spanish) &
+(~f_English | ~f_German) &
+(~f_English | ~f_Italian) &
+(~f_French | ~f_Spanish) &
+(~f_French | ~f_German) &
+(~f_French | ~f_Italian) &
+(~f_Spanish | ~f_German) &
+(~f_Spanish | ~f_Italian) &
+(~f_German | ~f_Italian) &
+(f_HeatingElement <=> (f_OneLevelHeating | f_MultiLevelHeating)) &
+(~f_OneLevelHeating | ~f_MultiLevelHeating) &
 (f_PowerLevel => f_Keypad) &
 (f_Recipe  => f_Keypad) &
 (f_MinusPlus => f_Keypad) &

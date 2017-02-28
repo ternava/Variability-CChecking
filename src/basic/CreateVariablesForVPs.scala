@@ -13,9 +13,9 @@ object CreateVariablesForVPs {
 
   def apply(varNames: ArrayBuffer[String], toMap: mutable.Map[String, Int]): Unit = {
 
-    toMap += add(PropositionSymbol("VProot"), 1)
+    toMap += add(PropositionSymbol("VProot"), 100)
 
-    var i: Int = 1
+    var i: Int = 100
     for(l <- varNames) {
       i = i + 1
       toMap += add(PropositionSymbol(l), i)
