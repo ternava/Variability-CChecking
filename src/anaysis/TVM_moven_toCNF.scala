@@ -6,10 +6,7 @@ package anaysis
 
 import java.io.File
 
-import basic._
-
-import scala.reflect.runtime.universe._
-import MicrowaveOvenSPL.oven._
+import SPL_Analysed_Examples.MicrowaveOvenSPL._
 import basic_sat4j_setup.SAT4jSetup
 import dsl._
 import org.sat4j.specs._
@@ -19,42 +16,18 @@ import scala.collection.mutable.ArrayBuffer
 
 object TVM_moven_toCNF {
 
-  val Language: VariationPoint    = VP(asset(typeOf[Language].typeSymbol))
-  val English: Variant            = Variant(asset(typeOf[English.type].termSymbol))
-  val French: Variant             = Variant(asset(typeOf[French.type].termSymbol))
-  val Italian: Variant            = Variant(asset(typeOf[Italian.type].termSymbol))
-  val Albanian: Variant           = Variant(asset(typeOf[Albanian.type].termSymbol))
-  val German: Variant             = Variant(asset(typeOf[German.type].termSymbol))
-  val Spanish: Variant            = Variant(asset(typeOf[Spanish.type].termSymbol))
-
-  val Door                      = OPT_VP(asset(typeOf[DoorStatus].typeSymbol))
-  val Open: Variant             = Variant(asset(typeOf[Open.type].termSymbol))
-  val Close: Variant            = Variant(asset(typeOf[Close.type].termSymbol))
-
-
   import basic._
   private val map = mutable.Map.empty[String, Int]
-
-
-
+  private val lst: ArrayBuffer[String] = new ArrayBuffer()
 
 def main(args: Array[String]): Unit = {
 
-  import module._
-/*
-  module("Language.scala") {
-    Language is ALT with_variants (English, French, Albanian, Italian, German, Spanish) use
-      INHERITANCE with_binding RUN_TIME and_evolution OPEN
-  } */
+  /* Choose one or more TVM(s) to check! */
+  import tvms._
+  //tvm_door;
+  tvm_language
+  //tvm_temperature
 
-  module("Door.scala") {
-    Door is ALT with_variants(Open, Close) use
-      INHERITANCE with_binding RUN_TIME and_evolution CLOSE
-  }
-
-
-
-  val lst: ArrayBuffer[String] = new ArrayBuffer()
   for(l <- asset.variant_asset_elements) {
     lst += l.toString.split(" ").last
   }
