@@ -9,8 +9,8 @@ f_MicrowaveOven &
 (f_Beeper => f_MicrowaveOven) &
 (f_DisplayLanguage <=> f_MicrowaveOven) &
 (f_WeightSensor <=> (f_BooleanWeight | f_AnalogWeight)) &
-(~(f_BooleanWeight) | ~(f_AnalogWeight)) &
-(f_DisplayLanguage => (f_English | f_French | f_Spanish | f_German | f_Italian)) &
+(~f_BooleanWeight | ~f_AnalogWeight) &
+(f_DisplayLanguage <=> (f_English | f_French | f_Spanish | f_German | f_Italian)) &
 (~f_English | ~f_French) &
 (~f_English | ~f_Spanish) &
 (~f_English | ~f_German) &

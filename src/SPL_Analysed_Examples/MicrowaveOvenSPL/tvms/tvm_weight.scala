@@ -10,7 +10,7 @@ import scala.reflect.runtime.universe._
 
 object tvm_weight {
 
-  val WeightSensor            = VP(asset(typeOf[WeightSensor].typeSymbol))
+  val WeightSensor: VP           = VP(asset(typeOf[WeightSensor].typeSymbol))
   val BooleanWeight: Variant  = Variant(asset(typeOf[BooleanWeight.type].termSymbol))
   val AnalogWeight: Variant   = Variant(asset(typeOf[AnalogWeight.type].termSymbol))
 

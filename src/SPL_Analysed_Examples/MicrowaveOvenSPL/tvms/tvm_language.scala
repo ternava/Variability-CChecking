@@ -9,17 +9,17 @@ import scala.reflect.runtime.universe._
   */
 object tvm_language {
 
-  val Language: VariationPoint    = VP(asset(typeOf[Language].typeSymbol))
+  val Language: VP    = VP(asset(typeOf[Language].typeSymbol))
   val English: Variant            = Variant(asset(typeOf[English.type].termSymbol))
   val French: Variant             = Variant(asset(typeOf[French.type].termSymbol))
   val Italian: Variant            = Variant(asset(typeOf[Italian.type].termSymbol))
-  val Albanian: Variant           = Variant(asset(typeOf[Albanian.type].termSymbol))
+//  val Albanian: Variant           = Variant(asset(typeOf[Albanian.type].termSymbol))
   val German: Variant             = Variant(asset(typeOf[German.type].termSymbol))
   val Spanish: Variant            = Variant(asset(typeOf[Spanish.type].termSymbol))
 
   import module._
   module("Language.scala") {
-    Language is ALT with_variants (English, French, Albanian, Italian, German, Spanish) use
+    Language is ALT with_variants (English, French, Italian, German, Spanish) use
       INHERITANCE with_binding RUN_TIME and_evolution OPEN
   }
 

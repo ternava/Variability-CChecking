@@ -3,60 +3,60 @@ package anaysis
 /**
   * Created by Tërnava on 2/28/2017.
   */
+
+import java.io.{File, PrintWriter}
+
+import SPL_Analysed_Examples.MicrowaveOvenSPL
+
 import scala.collection.mutable._
-
-object traces {
-
-  val traceLinks: Map[Int, Int] = Map()
-
-  def apply(vp: Int): FeatureBuilder = new FeatureBuilder(vp)
-  implicit def feature2FeatureBuilder(vp: Int) = new FeatureBuilder(vp)
-
-}
-
-class FeatureBuilder(vp: Int) {
-  def implements(f: Int) = {
-    traces.traceLinks(vp) = f
-    vp
-  }
-}
+import basic.{CreateVariablesForVPs, TracesToDIMACS}
+import basic_sat4j_setup.SAT4jSetup
+import org.sat4j.specs.{ContradictionException, IProblem}
 
 object TL_moven_toCNF {
 
-  val feature: Map[String, Int] = Map()
-  val vp: Map[String, Int] = Map()
-
-  def copyMap(from: Map[String, Int], to: Map[String, Int]) = {
-    for((k,v) <- from) {
-      to += ((k,v))
-    }
-  }
-
-
-
+  val pl_names_for_vp: Map[String, Int] = Map()
+  val toFile: File = new File("Test_03.cnf")
 
   def main(args: Array[String]): Unit = {
 
+    import dsl.traces._
 
     FM_moven_toCNF.mainFM(args(0))
-    TVM_moven_toCNF.mainTVM()
+    //TVM_moven_toCNF.mainTVM()
 
-    copyMap(FM_moven_toCNF.map, feature)
-    copyMap(TVM_moven_toCNF.map, vp)
+    // Create mapping links...
+    MicrowaveOvenSPL.FeatureVPtraces
 
-    // debugging stuff...
-    println(feature)
-    println(vp)
+    println("List is: " + lst1)
 
-    println("One value from the MAP: " + feature("f_BooleanWeight"))
-    println("Another value from the MAP: " + vp("DoorStatus"))
+    CreateVariablesForVPs(lst1, pl_names_for_vp)
+    println("The mapped names: " + pl_names_for_vp)
 
-    import traces._
-    traces {
-      vp("DoorStatus") implements feature("f_DoorSensor")
+    TracesToDIMACS.save_pl_names_for_vp(pl_names_for_vp)
+
+    /* matching features with vps values to take their keys
+     * for writting in dimacs format*/
+    pairsmap(FM_moven_toCNF.map, pl_names_for_vp)
+
+
+    TracesToDIMACS.writeLinks(toFile)
+
+    /* SAT4j usage ----------------------------------------------*/
+    import basic_sat4j_setup.SAT4jSetup._
+
+    //var nrModels: Double = 0
+    val problem: IProblem = reader.parseInstance(toFile.getName)
+
+    try {
+      if(isConsistent(problem)) {
+        println("Trace links are Consistent!")
+        //nrModels = SAT4jSetup.validConfigurations(problem)
+        //println("Nr of Configurations is: " + nrModels)
+      }
+    } catch {
+      case e: ContradictionException => println("Trace links are NOT Consistent!", e)
     }
-
-    println("Trace Links: " + traceLinks)
 
   }
 

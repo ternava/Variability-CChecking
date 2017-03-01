@@ -1,0 +1,10 @@
+AnalogWeight 108
+Spanish 106
+BooleanWeight 109
+French 103
+Italian 104
+English 102
+German 105
+Language 101
+WeightSensor 107
+VProot 100

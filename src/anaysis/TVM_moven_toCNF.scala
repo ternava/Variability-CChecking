@@ -18,24 +18,23 @@ object TVM_moven_toCNF {
 
   import basic._
   val map = mutable.Map.empty[String, Int]
-  val lst: ArrayBuffer[String] = new ArrayBuffer()
+  val generatedFromTraces: File = new File("moven_pl_names_for_vp.txt")
 
-//def main(args: Array[String]): Unit = {
-  def mainTVM() = {
+def main(args: Array[String]): Unit = {
+  //def mainTVM() = {
 
   /* Choose one or more TVM(s) to check! */
   import tvms._
-  tvm_door;
-  //tvm_language
+  //tvm_door;
+    tvm_language
   //tvm_temperature
+    tvm_weight
 
-  for(l <- asset.variant_asset_elements) {
-    lst += l.toString.split(" ").last
-  }
-  println(lst) // debugging stuff...
+  GetVariablesForVPs(generatedFromTraces, map)
 
-  CreateVariablesForVPs(lst, map)
+  println("The assets with the documented variability are: " + GetVariablesForVPs.lst) // debugging stuff...
   println("The VPs and Vs are: " + map) // debugging stuff...
+
 
   val vm = VariabilityModel.get
   println(vm)// debugging stuff...
@@ -57,12 +56,12 @@ object TVM_moven_toCNF {
 
   try {
     if(isConsistent(problem)) {
-      println("SAT! ")
+      println("The TVM(s) is Consistent!")
       nrModels = SAT4jSetup.validConfigurations(problem)
       println("Nr of Configurations is: " + nrModels)
     }
   } catch {
-    case e: ContradictionException => println("UnSAT ", e)
+    case e: ContradictionException => println("The TVM(s) is NOT Consistent!", e)
   }
 
 }
