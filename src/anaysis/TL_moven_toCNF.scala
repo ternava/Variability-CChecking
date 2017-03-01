@@ -46,6 +46,7 @@ object TL_moven_toCNF {
     import basic_sat4j_setup.SAT4jSetup._
 
     //var nrModels: Double = 0
+    solver.clearLearntClauses()
     val problem: IProblem = reader.parseInstance(toFile.getName)
 
     try {
