@@ -61,6 +61,7 @@ class WriteFile(fromFile: List[String], toFile: File, theFile: Iterator[String])
   def writeHeader: Unit = {
     destination.write("c " + toFile.getName + "\n")
     destination.write("p cnf " + getLinesVariables + "\n")
+    //I was taking the root: "1 0 \n" !!!
     //destination.write(theFile.drop(2).toList.head + "\n")
   }
 
@@ -110,9 +111,9 @@ def main(args: Array[String]): Unit = {
   /* Choose one or more TVM(s) to check! */
   import tvms._
   //tvm_door;
-    //tvm_language
+    tvm_language
   //tvm_temperature
-    tvm_weight
+    //tvm_weight
 
   GetVariablesForVPs(generatedFromTraces, map)
 
