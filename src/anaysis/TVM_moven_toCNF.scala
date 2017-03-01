@@ -34,17 +34,25 @@ class WriteFile(fromFile: List[String], toFile: File, theFile: Iterator[String])
 
   val destination: PrintWriter = new PrintWriter(toFile)
 
+  def max(xs: List[Int]): Option[Int] = xs match {
+    case Nil => None
+    case List(x: Int) => Some(x)
+    case x :: y :: rest => max( (if (x > y) x else y) :: rest )
+  }
+
   /* Getting the number of lines and variables in a .cnf file */
   private def getLinesVariables: String = {
     var nrVariables: Int = 0
-    var nrLines:     Int = 1
+    var nrLines:     Int = 0
 
     fromFile.foreach { s =>
       nrLines += 1
-      for(m <- s) {
-        nrVariables = s.split(" ").toList.max.toInt // Problem with this!???
-        //println("Variables: " , nrVariables)
+      val lst = """[0-9]+""".r.findAllIn(s).toList.map(_.toInt)//s.split(" ").toList.max.toInt // Problem with this!???
+      nrVariables = max(lst) match {
+        case Some(i) => i
+        case None => 0
       }
+
     }
     println(nrVariables + " " + nrLines)
     nrVariables + " " + nrLines
@@ -53,7 +61,7 @@ class WriteFile(fromFile: List[String], toFile: File, theFile: Iterator[String])
   def writeHeader: Unit = {
     destination.write("c " + toFile.getName + "\n")
     destination.write("p cnf " + getLinesVariables + "\n")
-    destination.write(theFile.drop(2).toList.head + "\n")
+    //destination.write(theFile.drop(2).toList.head + "\n")
   }
 
   def writeLines: Unit = {
