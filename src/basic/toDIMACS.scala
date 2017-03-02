@@ -14,7 +14,8 @@ private class ConvertToDimacs(val cnfSentence: CNFSentence, val map: mutable.Map
   def keyToVal = {
     //This expression will do the same mapping, too.
     //println(map.foldLeft(r3){case (s, (k,v)) => s.replaceAll(k,v.toString)})
-    """(f_|)[A-Za-z]+""".r.replaceAllIn(cnfSentence.toString, m => map.getOrElse(m.group(0), m.group(0)).toString)
+    val rep = """(f_|)[A-Za-z]+""".r.replaceAllIn(cnfSentence.toString, m => map.getOrElse(m.group(0), m.group(0)).toString)
+    rep.replaceAll("VProot", "100")
   }
 
   def max(xs: List[Int]): Option[Int] = xs match {

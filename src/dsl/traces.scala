@@ -16,9 +16,11 @@ object traces {
   val mapping_links: Map[Int, Int] = Map()
 
   def apply(vp: VP): FeatureBuilder = new FeatureBuilder(vp)
+  def apply(vp: OPT_VP): FeatureBuilder3 = new FeatureBuilder3(vp)
   def apply(v: Variant): FeatureBuilder2 = new FeatureBuilder2(v)
 
   implicit def feature2FeatureBuilder(vp: VP) = new FeatureBuilder(vp)
+  implicit def feature2FeatureBuilder(vp: OPT_VP) = new FeatureBuilder3(vp)
   implicit def feature2FeatureBuilder(v: Variant) = new FeatureBuilder2(v)
 
 
@@ -41,10 +43,19 @@ class FeatureBuilder(vp: VP) {
     vp
   }
 }
+
 class FeatureBuilder2(v: Variant) {
   def implements(f: feature) = {
     traces.links(f) = v.var_asset_elem
     traces.lst1 += v.var_asset_elem.toString.split(" ").last
     v
+  }
+}
+
+class FeatureBuilder3(vp: OPT_VP) {
+  def implements(f: feature) = {
+    traces.links(f) = vp.asset_elem
+    traces.lst1 += vp.asset_elem.toString.split(" ").last
+    vp
   }
 }

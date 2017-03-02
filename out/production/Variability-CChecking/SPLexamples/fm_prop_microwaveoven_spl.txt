@@ -30,5 +30,4 @@ f_MicrowaveOven &
 (f_TODClock => f_Keypad) &
 (f_TODClock => f_MultiLineDisplay) &
 (f_PowerLevel <=> f_MultiLevelHeating) &
-(f_Recipe => f_MultiLineDisplay) &
-(f_Recipe => (f_AnalogWeight | f_MultiLevelHeating))
+(f_Recipe => f_MultiLineDisplay)

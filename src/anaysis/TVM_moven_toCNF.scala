@@ -9,6 +9,7 @@ import java.io.{File, PrintWriter}
 import SPL_Analysed_Examples.MicrowaveOvenSPL._
 import basic_sat4j_setup.SAT4jSetup
 import dsl._
+import org.sat4j.reader.ParseFormatException
 import org.sat4j.specs._
 
 import scala.collection.mutable
@@ -42,18 +43,20 @@ class WriteFile(fromFile: List[String], toFile: File, theFile: Iterator[String])
 
   /* Getting the number of lines and variables in a .cnf file */
   private def getLinesVariables: String = {
-    var nrVariables: Int = 0
     var nrLines:     Int = 0
+    var lst_buff: ArrayBuffer[List[Int]] = ArrayBuffer()
 
     fromFile.foreach { s =>
-      nrLines += 1
-      val lst = """[0-9]+""".r.findAllIn(s).toList.map(_.toInt)//s.split(" ").toList.max.toInt // Problem with this!???
-      nrVariables = max(lst) match {
-        case Some(i) => i
-        case None => 0
-      }
-
+        nrLines += 1
+        val lst = """[0-9]+""".r.findAllIn(s).toList.map(_.toInt)//s.split(" ").toList.max.toInt // Problem with this!???
+        lst_buff += lst
     }
+
+   println("The list is: " + lst_buff.flatten.toList)
+    val nrVariables: Int = max(lst_buff.flatten.toList) match {
+                            case Some(i) => i
+                            case None => 0
+                          }
     println(nrVariables + " " + nrLines)
     nrVariables + " " + nrLines
   }
@@ -95,7 +98,7 @@ object TVM_moven_toCNF {
   def traces = t.getLines()
   def fmodel = fm.getLines()
 
-  val d1: File = new File("sliceTraces_01.cnf")
+  val d1: File = new File("sliceTL_01.cnf")
   val d2: File = new File("sliceFM_02.cnf")
 
   def traces_final = Source.fromFile(d1)
@@ -111,14 +114,18 @@ def main(args: Array[String]): Unit = {
   /* Choose one or more TVM(s) to check! */
   import tvms._
   //tvm_door;
-    tvm_language
+   //tvm_language
   //tvm_temperature
-    //tvm_weight
+   tvm_weight
 
   GetVariablesForVPs(generatedFromTraces, map)
 
   println("The assets with the documented variability are: " + GetVariablesForVPs.lst) // debugging stuff...
   println("The VPs and Vs are: " + map) // debugging stuff...
+
+  //  if(map.isEmpty) {
+  //    return println("The trace links are missing for this TVM!")
+   // }
 
 
   val vm = VariabilityModel.get
@@ -132,6 +139,8 @@ def main(args: Array[String]): Unit = {
 
   val toFile: File = new File("Test_02.cnf")
   ConvertToDimacs(sentence, map, toFile)
+
+
 
   /* SAT4j usage ----------------------------------------------*/
   import basic_sat4j_setup.SAT4jSetup._
@@ -153,7 +162,7 @@ def main(args: Array[String]): Unit = {
 
   /* Consistency Checking part: ------------------------------- */
 
-  var nrModels1, nrModels2, nrModels3, nrModels4: Double = 0
+  var nrModels1: Double = 0
 
   val ef = new ExtractFile(source, traces)
   val fileToWrite: List[String] = ef.extract
@@ -183,18 +192,18 @@ def main(args: Array[String]): Unit = {
   try {
     if(isConsistent(problem4)) {
       println("SAT! ")
-      nrModels4 = validConfigurations(problem4)
-      println("Nr of Configurations is: " + nrModels4)
+      nrModels1 = validConfigurations(problem4)
+      println("Nr of Configurations is: " + nrModels1)
     }
   } catch {
     case e: ContradictionException => println("UnSAT ", e)
   }
 
   //assert(nrModels4 == nrModels1, "Equal")
-  if(nrModels4 == nrModels1) {
-    println("Models are Consistent to each other!")
+  if((nrModels1-1) == nrModels) {
+    println("Models are Consistent to each other!",(nrModels1-1), nrModels)
   } else {
-    println("Models are Inconsistent to each other!")
+    println("Models are Inconsistent to each other!", (nrModels1-1), nrModels)
   }
 
 
