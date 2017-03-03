@@ -116,7 +116,8 @@ def main(args: Array[String]): Unit = {
   //tvm_door;
    //tvm_language
   //tvm_temperature
-   tvm_weight
+   //tvm_weight
+  tvm_rotate
 
   GetVariablesForVPs(generatedFromTraces, map)
 

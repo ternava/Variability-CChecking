@@ -2,7 +2,9 @@ package basic_sat4j_setup
 
 import java.io.{File, PrintWriter}
 
+import org.sat4j.core.LiteralsUtils
 import org.sat4j.minisat.SolverFactory
+import org.sat4j.minisat.core.{DataStructureFactory, Solver}
 import org.sat4j.reader.DimacsReader
 import org.sat4j.specs.{IProblem, ISolver}
 import org.sat4j.tools.ModelIterator
@@ -43,5 +45,44 @@ object SAT4jSetup {
     reader.decode(p.model, out)
     out.println()
   }
+
+  /* Checking whether a feature in FM is Dead!
+* ------------------------------------------------------------------------------*/
+  def isDead(fIndex: Int) = {
+    // if(isConsistent(p)) {
+    if((solver.asInstanceOf[Solver[DataStructureFactory]]).assume(LiteralsUtils.negLit(fIndex))) { //assume(LiteralsUtils.posLit(fIndex))) {
+      println("Feature " + fIndex + " is Dead!")
+      //false
+    } else
+    //{
+      println("Feature " + fIndex + " is not Dead!")
+    //true
+    //}
+    //!isConsistent(p)
+    //}
+
+    //} else {
+    // println("The FM is inconsistent!")
+  }
+
+  /* Checking whether a feature in FM is Common!
+  * ------------------------------------------------------------------------------*/
+  def isCommon(fIndex: Int) = {
+    // if(isConsistent(p)) {
+    if((solver.asInstanceOf[Solver[DataStructureFactory]]).assume(LiteralsUtils.negLit(fIndex))) {
+      println("Feature " + fIndex + " is not Common!")
+      //false
+    } else
+    //{
+      println("Feature " + fIndex + " is Common!")
+    //true
+    //}
+    //!isConsistent(p)
+    //}
+
+    //} else {
+    // println("The FM is inconsistent!")
+  }
+
 
 }

@@ -1,5 +1,7 @@
 AnalogWeight 108
 Spanish 106
+DoorStatus 110
+Rotate 111
 BooleanWeight 109
 French 103
 Italian 104
