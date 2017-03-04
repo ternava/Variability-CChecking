@@ -52,7 +52,7 @@ class WriteFile(fromFile: List[String], toFile: File, theFile: Iterator[String])
         lst_buff += lst
     }
 
-   println("The list is: " + lst_buff.flatten.toList)
+   //println("The list is: " + lst_buff.flatten.toList)
     val nrVariables: Int = max(lst_buff.flatten.toList) match {
                             case Some(i) => i
                             case None => 0
@@ -108,6 +108,10 @@ object TVM_moven_toCNF {
 
   /*-----------------------------------------------------------------------*/
 
+
+
+
+
 def main(args: Array[String]): Unit = {
   //def mainTVM() = {
 
@@ -116,8 +120,8 @@ def main(args: Array[String]): Unit = {
   //tvm_door;
    //tvm_language
   //tvm_temperature
-   //tvm_weight
-  tvm_rotate
+   tvm_weight
+  //tvm_rotate
 
   GetVariablesForVPs(generatedFromTraces, map)
 
@@ -164,6 +168,7 @@ def main(args: Array[String]): Unit = {
   /* Consistency Checking part: ------------------------------- */
 
   var nrModels1: Double = 0
+  var nrModelsAll: Double = 0
 
   val ef = new ExtractFile(source, traces)
   val fileToWrite: List[String] = ef.extract
@@ -178,13 +183,19 @@ def main(args: Array[String]): Unit = {
 
   val ef2 = new ExtractFile(traces_excerpt, fmodel)
   val fileToWrite2: List[String] = ef2.extract
-  for(et <- fileToWrite2) println("Test2: " + et)
+  //for(et <- fileToWrite2)
+    println("Test2: " + fileToWrite2)
 
   val wf2 = new WriteFile(fileToWrite2, d2, fmodel)
   wf2.writeHeader
   wf2.writeLines
 
   fm.close()
+
+  AllSlicesToDimacs(fileToWrite, fileToWrite2, toFile)
+
+
+
 
 
   solver.clearLearntClauses()
@@ -200,13 +211,25 @@ def main(args: Array[String]): Unit = {
     case e: ContradictionException => println("UnSAT ", e)
   }
 
-  //assert(nrModels4 == nrModels1, "Equal")
-  if((nrModels1-1) == nrModels) {
-    println("Models are Consistent to each other!",(nrModels1-1), nrModels)
-  } else {
-    println("Models are Inconsistent to each other!", (nrModels1-1), nrModels)
+  solver.clearLearntClauses()
+  val problemAll: IProblem = reader.parseInstance("all_slices.cnf")
+
+  try {
+    if(isConsistent(problemAll)) {
+      println("SAT! ")
+      nrModelsAll = validConfigurations(problemAll)
+      println("Nr of Configurations is: " + nrModelsAll)
+    }
+  } catch {
+    case e: ContradictionException => println("UnSAT ", e)
   }
 
+  //assert(nrModels4 == nrModels1, "Equal")
+  if((nrModels1-1) == nrModelsAll) {
+    println("Models are Consistent to each other!",(nrModels1-1), nrModels, nrModelsAll)
+  } else {
+    println("Models are Inconsistent to each other!", (nrModels1-1), nrModels, nrModelsAll)
+  }
 
 }
 
