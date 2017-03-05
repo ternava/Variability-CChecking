@@ -21,7 +21,8 @@ object tvm_temperature {
 
   import module._
 
-  val newVPTemperature: tech_VP = Temperature.toTechnicalVP
+  //val newVPTemperature: tech_VP = Temperature.toTechnicalVP
+  val newVPTemperature: nested_VP = Temperature.toNestedVP
 
   module("Temperature.scala") {
 

@@ -47,6 +47,9 @@ object FeatureVPtraces {
     High implements f_High
     Medium implements f_Medium
     Low implements f_Low
+    Light implements f_Light
+    LightOn implements f_Light
+    LightOff implements f_Light
 
 
 

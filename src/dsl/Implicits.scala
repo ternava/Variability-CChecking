@@ -82,6 +82,12 @@ protected[dsl] class LogicBuilder(val vp: VariationPoint) {
     lgc = OPT
     vp
   }
+ /* def is_ (logic: String): VariationPoint = {
+    assert(logic == "OPT")
+    VariabilityModel.add(vp, null, null, null, null, null)
+    lgc = OPT
+    vp
+  } */
 }
 
 

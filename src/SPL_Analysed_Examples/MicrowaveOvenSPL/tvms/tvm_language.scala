@@ -9,7 +9,7 @@ import scala.reflect.runtime.universe._
   */
 object tvm_language {
 
-  val Language: VP    = VP(asset(typeOf[Language].typeSymbol))
+  val Language: OPT_VP    = OPT_VP(asset(typeOf[Language].typeSymbol))
   val English: Variant            = Variant(asset(typeOf[English.type].termSymbol))
   val French: Variant             = Variant(asset(typeOf[French.type].termSymbol))
   val Italian: Variant            = Variant(asset(typeOf[Italian.type].termSymbol))

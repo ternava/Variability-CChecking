@@ -10,7 +10,7 @@ import scala.reflect.runtime.universe._
 
 object tvm_light {
 
-  val Light                  = VP(asset(typeOf[Light].typeSymbol))
+  val Light: OPT_VP          = OPT_VP(asset(typeOf[Light].typeSymbol))
   val LightOn: Variant       = Variant(asset(typeOf[LOn.type].termSymbol))
   val LightOff: Variant      = Variant(asset(typeOf[LOff.type].termSymbol))
 
