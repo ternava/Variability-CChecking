@@ -31,18 +31,25 @@ private class ConvertToDimacs(val cnfSentence: CNFSentence, val map: mutable.Map
                     }
   val nrLines = "&".r.findAllIn(keyToVal).toList.size + 1
 
+  var countCh: Int = 0
   def writeInDimacsFormat = {
     destination.write("c " + toFile.getName + "\n")
     destination.write("p cnf " + nrVariables + " " + nrLines + "\n")
     for (w <- keyToVal.trim) {
-      w match {
-        case '~' => destination.write("-".trim)
-        case '|' => destination.write(" ".trim)
-        case '&' => destination.write("0\n")
-        case '(' => destination.write("".trim)
-        case ')' => destination.write("".trim)
-        case _ => destination.write(w)
+      if(countCh != keyToVal.size-1){
+        w match {
+          case '~' => destination.write("-".trim)
+          case '|' => destination.write(" ".trim)
+          case '&' => destination.write("0\n")
+          case '(' => destination.write("".trim)
+          case ')' => destination.write("".trim)
+          case _ => destination.write(w)
+        }
+        countCh += 1
+      } else {
+        destination.write(" 0")
       }
+
     }
     destination.close()
   }

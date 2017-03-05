@@ -123,12 +123,12 @@ def main(args: Array[String]): Unit = {
   /* Choose one or more TVM(s) to check! */
   import tvms._
   //tvm_door;
-  tvm_language
+  //tvm_language
   //tvm_temperature
    //tvm_weight
   //tvm_rotate
   //tvm_door
-  //tvm_temperature
+  tvm_temperature
 
   GetVariablesForVPs(generatedFromTraces, map)
 
@@ -189,7 +189,7 @@ def main(args: Array[String]): Unit = {
   t.close()
 
   val ef2 = new ExtractFile(traces_excerpt, fmodel)
-  val fileToWrite2: List[String] = ef2.extract ::: List("1 0")
+  val fileToWrite2: List[String] = ef2.extract
   //for(et <- fileToWrite2)
     println("Test2: " + fileToWrite2)
 

@@ -21,6 +21,7 @@ object AllSlicesToDimacs {
     destination.write("p cnf " + nrVariables + " " + nrLines + "\n")
     //I was taking the root: "1 0 \n" !!!
     //destination.write(theFile.drop(2).toList.head + "\n")
+    destination.write("1 0 \n")
   }
 
   def writeLinesAll(fromFile: List[String]): Unit = {
