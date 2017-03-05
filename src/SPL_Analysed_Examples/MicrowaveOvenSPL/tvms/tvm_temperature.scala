@@ -20,6 +20,9 @@ object tvm_temperature {
   val MultiLevelHeating: Variant         = Variant(asset(typeOf[MultiLevelHeating.type].termSymbol))
 
   import module._
+
+  val newVPTemperature: tech_VP = Temperature.toTechnicalVP
+
   module("Temperature.scala") {
 
     HeatingElement is ALT with_variants
@@ -27,7 +30,7 @@ object tvm_temperature {
       INHERITANCE with_binding
       RUN_TIME and_evolution OPEN
 
-    val newVPTemperature: tech_VP = Temperature.toTechnicalVP
+
 
     newVPTemperature is ALT with_variants
       (High, Medium, Low) use

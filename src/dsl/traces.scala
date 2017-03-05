@@ -17,10 +17,12 @@ object traces {
 
   def apply(vp: VP): FeatureBuilder = new FeatureBuilder(vp)
   def apply(vp: OPT_VP): FeatureBuilder3 = new FeatureBuilder3(vp)
+  def apply(tvp: tech_VP): FeatureBuilder4 = new FeatureBuilder4(tvp)
   def apply(v: Variant): FeatureBuilder2 = new FeatureBuilder2(v)
 
   implicit def feature2FeatureBuilder(vp: VP) = new FeatureBuilder(vp)
   implicit def feature2FeatureBuilder(vp: OPT_VP) = new FeatureBuilder3(vp)
+  implicit def feature2FeatureBuilder(tvp: tech_VP) = new FeatureBuilder4(tvp)
   implicit def feature2FeatureBuilder(v: Variant) = new FeatureBuilder2(v)
 
 
@@ -57,5 +59,13 @@ class FeatureBuilder3(vp: OPT_VP) {
     traces.links(f) = vp.asset_elem
     traces.lst1 += vp.asset_elem.toString.split(" ").last
     vp
+  }
+}
+
+class FeatureBuilder4(tvp: tech_VP) {
+  def implements(f: feature) = {
+    traces.links(f) = tvp.var_elem
+    traces.lst1 += tvp.var_elem.toString.split(" ").last
+    tvp
   }
 }

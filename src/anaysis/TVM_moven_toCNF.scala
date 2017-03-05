@@ -58,14 +58,19 @@ class WriteFile(fromFile: List[String], toFile: File, theFile: Iterator[String])
                             case None => 0
                           }
     println(nrVariables + " " + nrLines)
-    nrVariables + " " + nrLines
+    nrVariables + " " + (nrLines + 1)
   }
 
-  def writeHeader: Unit = {
+  def writeHeaderTL: Unit = {
+    destination.write("c " + toFile.getName + "\n")
+    destination.write("p cnf " + getLinesVariables + "\n")
+  }
+  def writeHeaderFM: Unit = {
     destination.write("c " + toFile.getName + "\n")
     destination.write("p cnf " + getLinesVariables + "\n")
     //I was taking the root: "1 0 \n" !!!
     //destination.write(theFile.drop(2).toList.head + "\n")
+    destination.write("1 0 \n")
   }
 
   def writeLines: Unit = {
@@ -118,10 +123,12 @@ def main(args: Array[String]): Unit = {
   /* Choose one or more TVM(s) to check! */
   import tvms._
   //tvm_door;
-   //tvm_language
+  tvm_language
   //tvm_temperature
-   tvm_weight
+   //tvm_weight
   //tvm_rotate
+  //tvm_door
+  //tvm_temperature
 
   GetVariablesForVPs(generatedFromTraces, map)
 
@@ -175,19 +182,19 @@ def main(args: Array[String]): Unit = {
   for(et <- fileToWrite) println("Test:" + et)
 
   val wf = new WriteFile(fileToWrite, d1, source)
-  wf.writeHeader
+  wf.writeHeaderTL
   wf.writeLines
 
   s.close()
   t.close()
 
   val ef2 = new ExtractFile(traces_excerpt, fmodel)
-  val fileToWrite2: List[String] = ef2.extract
+  val fileToWrite2: List[String] = ef2.extract ::: List("1 0")
   //for(et <- fileToWrite2)
     println("Test2: " + fileToWrite2)
 
   val wf2 = new WriteFile(fileToWrite2, d2, fmodel)
-  wf2.writeHeader
+  wf2.writeHeaderFM
   wf2.writeLines
 
   fm.close()
@@ -225,10 +232,10 @@ def main(args: Array[String]): Unit = {
   }
 
   //assert(nrModels4 == nrModels1, "Equal")
-  if((nrModels1-1) == nrModelsAll) {
-    println("Models are Consistent to each other!",(nrModels1-1), nrModels, nrModelsAll)
+  if((nrModels == nrModels1) & (nrModels == nrModelsAll) & (nrModels1 == nrModelsAll)){
+    println("Models are Consistent to each other!",(nrModels1), nrModels, nrModelsAll)
   } else {
-    println("Models are Inconsistent to each other!", (nrModels1-1), nrModels, nrModelsAll)
+    println("Models are Inconsistent to each other!", (nrModels1), nrModels, nrModelsAll)
   }
 
 }

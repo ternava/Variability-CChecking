@@ -35,6 +35,10 @@ object moven_spl {
   val f_German = feature("f_German"); f_names += f_German
   val f_DisplayUnit = feature("f_DisplayUnit"); f_names += f_DisplayUnit
   val f_Light = feature("f_Light"); f_names += f_Light
+  val f_Temperature = feature("f_Temperature"); f_names += f_Temperature
+  val f_High = feature("f_High"); f_names += f_High
+  val f_Medium = feature("f_Medium"); f_names += f_Medium
+  val f_Low = feature("f_Low"); f_names += f_Low
 
 
 }

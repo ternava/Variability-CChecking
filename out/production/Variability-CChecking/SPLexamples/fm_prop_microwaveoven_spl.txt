@@ -21,13 +21,16 @@ f_MicrowaveOven &
 (~f_Spanish | ~f_German) &
 (~f_Spanish | ~f_Italian) &
 (~f_German | ~f_Italian) &
-(f_HeatingElement <=> (f_OneLevelHeating | f_MultiLevelHeating)) &
+(f_HeatingElement <=> (f_OneLevelHeating | f_MultiLevelHeating | f_Temperature)) &
 (~f_OneLevelHeating | ~f_MultiLevelHeating) &
+(~f_OneLevelHeating | ~f_Temperature) &
+(~f_Temperature | ~f_MultiLevelHeating) &
 (f_PowerLevel => f_Keypad) &
 (f_Recipe  => f_Keypad) &
 (f_MinusPlus => f_Keypad) &
 (f_TurnTable => f_Keypad) &
 (f_TODClock => f_Keypad) &
-(f_TODClock => f_MultiLineDisplay) &
-(f_PowerLevel <=> f_MultiLevelHeating) &
-(f_Recipe => f_MultiLineDisplay)
+(f_Temperature <=> (f_High | f_Medium | f_Low)) &
+(~f_High | ~f_Medium) &
+(~f_High | ~f_Low) &
+(~f_Medium | ~f_Low)

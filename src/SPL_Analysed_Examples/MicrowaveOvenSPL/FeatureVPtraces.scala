@@ -1,7 +1,7 @@
 package SPL_Analysed_Examples.MicrowaveOvenSPL
 
 import SPL_Analysed_Examples.MicrowaveOvenSPL.tvms._
-import dsl.traces
+import dsl.{module, traces}
 import specification_level.moven_spl
 
 /**
@@ -37,7 +37,16 @@ object FeatureVPtraces {
     AnalogWeight implements f_AnalogWeight
     BooleanWeight implements f_BooleanWeight
     Door implements f_DoorSensor
+    Open implements f_DoorSensor
+    Close implements f_DoorSensor
     Rotate implements f_TurnTable
+    HeatingElement implements f_HeatingElement
+    OneLevelHeating implements f_OneLevelHeating
+    MultiLevelHeating implements f_MultiLevelHeating
+    newVPTemperature implements f_Temperature
+    High implements f_High
+    Medium implements f_Medium
+    Low implements f_Low
 
 
 
