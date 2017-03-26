@@ -48,11 +48,11 @@ object TestCNF {
     //Debugging stuff....
     // def sf = Source.fromFile("C://Users//botek//workspaceSAT//SATSolver_Example_03//src//analyse_graph_spl//fm_prop_graph_spl.txt")
     //println("from File: " + sf.getLines().toList.toString().trim)
-    println(map)
+    // ---- println(map)
     //val PLP = PropositionalLogicParser
     //val r0: CNFSentence = SentenceToCNF(PLP.parse("GPL & (Type <=> GPL) & (Weight <=> GPL) & (Search => GPL) & (Algorithms => GPL) &  (Directed => Type) & (Undirected => Type) & (Type => (Directed | Undirected)) & (Type => ~(Directed & Undirected)) &(Weighted => Weight) &(Unweighted => Weight) & (Weight => (Weighted | Unweighted)) & (Weight => ~(Weighted & Unweighted)) & (DFS => Search)& (BFS => Search) & (Search => (DFS | BFS)) & (Search => ~(DFS & BFS)) & (Algorithms <=> (CycleChecking | MST | ConnectedComp | StronglyConComp | Number | SingleShPath)) & (MSTPrim => MST) & (MSTKruskal => MST) & (MST => (MSTPrim | MSTKruskal)) & (MST => ~(MSTPrim & MSTKruskal))"))
     //println(r0)
-    println(r)
+    // ---- println(r)
     //println("rez: " + s)
     //println(dmcs.nrVariables)
     //println(dmcs.nrLines)

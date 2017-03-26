@@ -39,7 +39,7 @@ object VariabilityModel {
     power_set foreach {
       case (key, value) =>  value match {
         case (x, y) =>
-          println(key + " : " + x + " -> " + y)
+        // --- println(key + " : " + x + " -> " + y)
       }
     }
   }

@@ -36,9 +36,12 @@ object FeatureVPtraces {
     WeightSensor implements f_WeightSensor
     AnalogWeight implements f_AnalogWeight
     BooleanWeight implements f_BooleanWeight
-    Door implements f_DoorSensor
-    Open implements f_DoorSensor
-    Close implements f_DoorSensor
+    Door implements f_WeightSensor
+    Open implements f_WeightSensor
+    Close implements f_WeightSensor
+    //Door implements f_DoorSensor
+    //Open implements f_DoorSensor
+    //Close implements f_DoorSensor
     Rotate implements f_TurnTable
     HeatingElement implements f_HeatingElement
     OneLevelHeating implements f_OneLevelHeating

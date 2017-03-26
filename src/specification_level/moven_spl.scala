@@ -26,6 +26,7 @@ object moven_spl {
   val f_MinusPlus = feature("f_MinusPlus"); f_names += f_MinusPlus
   val f_Keypad = feature("f_Keypad"); f_names += f_Keypad
   val f_MultiLineDisplay = feature("f_MultiLineDisplay"); f_names += f_MultiLineDisplay
+  val f_OneLineDisplay = feature("f_OneLineDisplay"); f_names += f_OneLineDisplay
   val f_DoorSensor = feature("f_DoorSensor"); f_names += f_DoorSensor
   val f_MicrowaveOven = feature("f_MicrowaveOven"); f_names += f_MicrowaveOven
   val f_Beeper = feature("f_Beeper"); f_names += f_Beeper

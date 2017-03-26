@@ -10,7 +10,7 @@ import scala.reflect.runtime.universe._
   */
 object tvm_door {
 
-  val Door                      = OPT_VP(asset(typeOf[DoorStatus].typeSymbol))
+ /* val Door                      = OPT_VP(asset(typeOf[DoorStatus].typeSymbol))
   val Open: Variant             = Variant(asset(typeOf[Open.type].termSymbol))
   val Close: Variant            = Variant(asset(typeOf[Close.type].termSymbol))
 
@@ -18,6 +18,6 @@ object tvm_door {
   module("Door.scala") {
     Door is ALT with_variants(Open, Close) use
       INHERITANCE with_binding RUN_TIME and_evolution CLOSE
-  }
+  }*/
 
 }

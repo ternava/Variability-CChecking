@@ -50,7 +50,7 @@ object TuplesToList {
 
       }
     }
-    println("Bufferi 2 eshte: " + buff2.toList)
+    // --- println("Bufferi 2 eshte: " + buff2.toList)
     buff2.toList
   }
 

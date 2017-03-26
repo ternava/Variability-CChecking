@@ -14,9 +14,11 @@ import org.sat4j.tools.ModelIterator
   */
 object SAT4jSetup {
 
-  val solver: ISolver = new ModelIterator(SolverFactory.newDefault())
+  //val solver: ISolver = new ModelIterator(SolverFactory.newDefault())
+  val solver: ISolver = SolverFactory.newDefault
+  val mi: ModelIterator = new ModelIterator(solver)
   val timeout = solver.setTimeout(3600) // 1 hour timeout
-  val reader: DimacsReader = new DimacsReader(solver)
+  val reader: DimacsReader = new DimacsReader(mi)
   val out: PrintWriter = new PrintWriter(new File("example_fm_01.txt"))
 
   /* Check the consistency of a formula ---------------------------------------------------------*/
@@ -50,12 +52,14 @@ object SAT4jSetup {
 * ------------------------------------------------------------------------------*/
   def isDead(fIndex: Int) = {
     // if(isConsistent(p)) {
-    if((solver.asInstanceOf[Solver[DataStructureFactory]]).assume(LiteralsUtils.negLit(fIndex))) { //assume(LiteralsUtils.posLit(fIndex))) {
-      println("Feature " + fIndex + " is Dead!")
+    if((solver.asInstanceOf[Solver[DataStructureFactory]]).assume(LiteralsUtils.posLit(fIndex))) {
+      //println("Feature " + fIndex + " is Dead!")
+      false
       //false
     } else
+    true
     //{
-      println("Feature " + fIndex + " is not Dead!")
+      //println("Feature " + fIndex + " is not Dead!")
     //true
     //}
     //!isConsistent(p)
@@ -70,12 +74,12 @@ object SAT4jSetup {
   def isCommon(fIndex: Int) = {
     // if(isConsistent(p)) {
     if((solver.asInstanceOf[Solver[DataStructureFactory]]).assume(LiteralsUtils.negLit(fIndex))) {
-      println("Feature " + fIndex + " is not Common!")
-      //false
+      //println("Feature " + fIndex + " is not Common!")
+      false
     } else
     //{
-      println("Feature " + fIndex + " is Common!")
-    //true
+     // println("Feature " + fIndex + " is Common!")
+    true
     //}
     //!isConsistent(p)
     //}

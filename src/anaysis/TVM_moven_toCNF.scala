@@ -57,7 +57,7 @@ class WriteFile(fromFile: List[String], toFile: File, theFile: Iterator[String])
                             case Some(i) => i
                             case None => 0
                           }
-    println(nrVariables + " " + nrLines)
+    // --- println(nrVariables + " " + nrLines)
     nrVariables + " " + (nrLines + 1)
   }
 
@@ -75,7 +75,7 @@ class WriteFile(fromFile: List[String], toFile: File, theFile: Iterator[String])
 
   def writeLines: Unit = {
     for(line <- fromFile) {
-      println(line)
+      // --- println(line)
       destination.write(line)
       destination.write("\n")
     }
@@ -113,72 +113,84 @@ object TVM_moven_toCNF {
 
   /*-----------------------------------------------------------------------*/
 
+  def time[R](block: => R): R = {
+    val t0 = System.nanoTime()
+    val result = block    // call-by-name
+    val t1 = System.nanoTime()
+    println("Elapsed time: " + (t1 - t0) + "ns")
+    result
+  }
 
+  /*-----------------------------------------------------------------------*/
 
 
 
 def main(args: Array[String]): Unit = {
   //def mainTVM() = {
-
+  val t1 = System.nanoTime
   /* Choose one or more TVM(s) to check! */
   import tvms._
   //tvm_door;
-  //tvm_language
-  //tvm_temperature
-  //tvm_weight
-  //tvm_rotate
-  tvm_light
-
-  GetVariablesForVPs(generatedFromTraces, map)
-
-  println("The assets with the documented variability are: " + GetVariablesForVPs.lst) // debugging stuff...
-  println("The VPs and Vs are: " + map) // debugging stuff...
-
-  //  if(map.isEmpty) {
-  //    return println("The trace links are missing for this TVM!")
-   // }
+    //tvm_language
+    //tvm_temperature
+    tvm_weight
+    //tvm_rotate
+    //tvm_light
 
 
-  val vm = VariabilityModel.get
-  println(vm)// debugging stuff...
+    GetVariablesForVPs(generatedFromTraces, map)
 
-  val vm_buffer = TuplesToList(vm)
-  val sentence = ConvertToCNF(ConvertDSLtoPLogic(vm_buffer))
-  println("The CNF sentence is: " + sentence) // debugging stuff...
+    // --- println("The assets with the documented variability are: " + GetVariablesForVPs.lst) // debugging stuff...
+    // --- println("The VPs and Vs are: " + map) // debugging stuff...
 
-  println(ConvertDSLtoPLogic(vm_buffer)) // debugging stuff...
-
-  val toFile: File = new File("Test_02.cnf")
-  ConvertToDimacs(sentence, map, toFile)
+    //  if(map.isEmpty) {
+    //    return println("The trace links are missing for this TVM!")
+    // }
 
 
+    val vm = VariabilityModel.get
+    // ---  println(vm)// debugging stuff...
 
-  /* SAT4j usage ----------------------------------------------*/
-  import basic_sat4j_setup.SAT4jSetup._
+    val vm_buffer = TuplesToList(vm)
+    val sentence = ConvertToCNF(ConvertDSLtoPLogic(vm_buffer))
+    // --- println("The CNF sentence is: " + sentence) // debugging stuff...
 
-  var nrModels: Double = 0
-  val problem: IProblem = reader.parseInstance(toFile.getName)
+    // --- println(ConvertDSLtoPLogic(vm_buffer)) // debugging stuff...
 
-  solver.clearLearntClauses()
-  try {
-    if(isConsistent(problem)) {
-      println("The TVM(s) is Consistent!")
-      nrModels = SAT4jSetup.validConfigurations(problem)
-      println("Nr of Configurations is: " + nrModels)
+    val toFile: File = new File("Test_02.cnf")
+
+    ConvertToDimacs(sentence, map, toFile)
+
+  val duration2 = (System.nanoTime - t1) / 1e9d
+  println("Duration2: " + duration2)
+
+    /* SAT4j usage ----------------------------------------------*/
+    import basic_sat4j_setup.SAT4jSetup._
+
+
+    var nrModels: Double = 0
+    val problem: IProblem = reader.parseInstance(toFile.getName)
+
+    solver.clearLearntClauses()
+    try {
+      if (isConsistent(problem)) {
+        // --- println("The TVM(s) is Consistent!")
+        nrModels = SAT4jSetup.validConfigurations(problem)
+        println("Nr of Configurations in TVM is: " + nrModels)
+      }
+    } catch {
+      case e: ContradictionException => println("The TVM(s) is NOT Consistent!", e)
     }
-  } catch {
-    case e: ContradictionException => println("The TVM(s) is NOT Consistent!", e)
-  }
 
 
-  /* Consistency Checking part: ------------------------------- */
+    /* Consistency Checking part: ------------------------------- */
 
   var nrModels1: Double = 0
   var nrModelsAll: Double = 0
 
   val ef = new ExtractFile(source, traces)
   val fileToWrite: List[String] = ef.extract
-  for(et <- fileToWrite) println("Test:" + et)
+  // --- for(et <- fileToWrite) println("Test:" + et)
 
   val wf = new WriteFile(fileToWrite, d1, source)
   wf.writeHeaderTL
@@ -190,7 +202,7 @@ def main(args: Array[String]): Unit = {
   val ef2 = new ExtractFile(traces_excerpt, fmodel)
   val fileToWrite2: List[String] = ef2.extract
   //for(et <- fileToWrite2)
-    println("Test2: " + fileToWrite2)
+  // --- println("Test2: " + fileToWrite2)
 
   val wf2 = new WriteFile(fileToWrite2, d2, fmodel)
   wf2.writeHeaderFM
@@ -200,42 +212,44 @@ def main(args: Array[String]): Unit = {
 
   AllSlicesToDimacs(fileToWrite, fileToWrite2, toFile)
 
+  val duration = (System.nanoTime - t1) / 1e9d
+  println("Duration: " + duration)
 
 
 
+    solver.clearLearntClauses()
+    val problem4: IProblem = reader.parseInstance(d2.getName)
 
-  solver.clearLearntClauses()
-  val problem4: IProblem = reader.parseInstance(d2.getName)
-
-  try {
-    if(isConsistent(problem4)) {
-      println("SAT! ")
-      nrModels1 = validConfigurations(problem4)
-      println("Nr of Configurations is: " + nrModels1)
+    try {
+      if (isConsistent(problem4)) {
+        // --- println("SAT! ")
+        nrModels1 = validConfigurations(problem4)
+        println("Nr of Configurations is: " + nrModels1)
+      }
+    } catch {
+      case e: ContradictionException => println("UnSAT ", e)
     }
-  } catch {
-    case e: ContradictionException => println("UnSAT ", e)
-  }
 
-  solver.clearLearntClauses()
-  val problemAll: IProblem = reader.parseInstance("all_slices.cnf")
 
-  try {
-    if(isConsistent(problemAll)) {
-      println("SAT! ")
-      nrModelsAll = validConfigurations(problemAll)
-      println("Nr of Configurations is: " + nrModelsAll)
+    solver.clearLearntClauses()
+    val problemAll: IProblem = reader.parseInstance("all_slices.cnf")
+
+    try {
+      if (isConsistent(problemAll)) {
+        // --- println("SAT! ")
+        nrModelsAll = validConfigurations(problemAll)
+        println("Nr of Configurations is: " + nrModelsAll)
+      }
+    } catch {
+      case e: ContradictionException => println("UnSAT ", e)
     }
-  } catch {
-    case e: ContradictionException => println("UnSAT ", e)
-  }
 
-  //assert(nrModels4 == nrModels1, "Equal")
-  if((nrModels == nrModels1) & (nrModels == nrModelsAll) & (nrModels1 == nrModelsAll)){
-    println("Models are Consistent to each other!",(nrModels1), nrModels, nrModelsAll)
-  } else {
-    println("Models are Inconsistent to each other!", (nrModels1), nrModels, nrModelsAll)
-  }
+    //assert(nrModels4 == nrModels1, "Equal")
+    if ((nrModels == nrModels1) & (nrModels == nrModelsAll) & (nrModels1 == nrModelsAll)) {
+      println("Models are Consistent to each other!", (nrModels1), nrModels, nrModelsAll)
+    } else {
+      println("Models are Inconsistent to each other!", (nrModels1), nrModels, nrModelsAll)
+    }
 
 }
 

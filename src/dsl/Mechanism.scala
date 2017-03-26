@@ -12,6 +12,8 @@ class Mechanism(name: String) {
 /* The other techniques can be added! */
 case object INHERITANCE extends Mechanism("Inheritance")
 case object OVERRIDING extends Mechanism("Overriding")
+case object STRATEGY_P extends Mechanism("StrategyPattern")
+case object PARAMETER extends Mechanism("Runtime Parameter")
 
 
 sealed trait Evolve

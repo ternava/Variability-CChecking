@@ -26,7 +26,7 @@ object AllSlicesToDimacs {
 
   def writeLinesAll(fromFile: List[String]): Unit = {
     for(line <- fromFile) {
-      println(line)
+      // --- println(line)
       destination.write(line)
       destination.write("\n")
     }
@@ -46,9 +46,9 @@ object AllSlicesToDimacs {
     val all_ef = sliceTL ::: sliceFM ::: lstAll.toList
    // println("All Test: " + all_ef)
 
-    println(all_ef.mkString(" ").trim)
+    // --- println(all_ef.mkString(" ").trim)
     val lst = """[0-9]+""".r.findAllIn(all_ef.mkString(" ").trim).toList.map(_.toInt)
-    println("LST: ", lst)
+    // --- println("LST: ", lst)
 
     nrVariables = lst.distinct.max
     nrLines = lst.count(_ == 0) + 1
