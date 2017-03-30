@@ -6,10 +6,8 @@ package anaysis
 
 import java.io.{File, PrintWriter}
 
-import SPL_Analysed_Examples.MicrowaveOvenSPL._
-import basic_sat4j_setup.SAT4jSetup
+
 import dsl._
-import org.sat4j.reader.ParseFormatException
 import org.sat4j.specs._
 
 import scala.collection.mutable
@@ -125,17 +123,30 @@ object TVM_moven_toCNF {
 
 
 
-def main(args: Array[String]): Unit = {
-  //def mainTVM() = {
   val t1 = System.nanoTime
-  /* Choose one or more TVM(s) to check! */
+
+
+
+def main(args: Array[String]): Unit = {
+
+
+  import basic_sat4j_setup.SAT4jSetup
+  import SPL_Analysed_Examples.MicrowaveOvenSPL._
   import tvms._
+
+  /* Choose one or more TVM(s) to check */
+
+  tvm_language
+  tvm_weight
+
+
   //tvm_door;
-    //tvm_language
-    //tvm_temperature
-    tvm_weight
-    //tvm_rotate
-    //tvm_light
+  //tvm_language
+  //tvm_temperature
+  //tvm_weight
+  //tvm_rotate
+  //tvm_light
+
 
 
     GetVariablesForVPs(generatedFromTraces, map)
@@ -146,6 +157,8 @@ def main(args: Array[String]): Unit = {
     //  if(map.isEmpty) {
     //    return println("The trace links are missing for this TVM!")
     // }
+
+
 
 
     val vm = VariabilityModel.get
@@ -161,8 +174,8 @@ def main(args: Array[String]): Unit = {
 
     ConvertToDimacs(sentence, map, toFile)
 
-  val duration2 = (System.nanoTime - t1) / 1e9d
-  println("Duration2: " + duration2)
+  //val duration2 = (System.nanoTime - t1) / 1e9d
+  //println("Duration2: " + duration2)
 
     /* SAT4j usage ----------------------------------------------*/
     import basic_sat4j_setup.SAT4jSetup._
@@ -170,18 +183,18 @@ def main(args: Array[String]): Unit = {
 
     var nrModels: Double = 0
     val problem: IProblem = reader.parseInstance(toFile.getName)
-
-    solver.clearLearntClauses()
-    try {
-      if (isConsistent(problem)) {
-        // --- println("The TVM(s) is Consistent!")
-        nrModels = SAT4jSetup.validConfigurations(problem)
-        println("Nr of Configurations in TVM is: " + nrModels)
-      }
-    } catch {
-      case e: ContradictionException => println("The TVM(s) is NOT Consistent!", e)
+//time {
+  solver.clearLearntClauses()
+  try {
+    if (isConsistent(problem)) {
+      // --- println("The TVM(s) is Consistent!")
+      nrModels = SAT4jSetup.validConfigurations(problem)
+      println("Nr of Configurations in TVM is: " + nrModels)
     }
-
+  } catch {
+    case e: ContradictionException => println("The TVM(s) is NOT Consistent!", e)
+  }
+//}
 
     /* Consistency Checking part: ------------------------------- */
 
@@ -213,44 +226,44 @@ def main(args: Array[String]): Unit = {
   AllSlicesToDimacs(fileToWrite, fileToWrite2, toFile)
 
   val duration = (System.nanoTime - t1) / 1e9d
-  println("Duration: " + duration)
+  //println("Duration: " + duration)
 
 
 
     solver.clearLearntClauses()
     val problem4: IProblem = reader.parseInstance(d2.getName)
-
-    try {
-      if (isConsistent(problem4)) {
-        // --- println("SAT! ")
-        nrModels1 = validConfigurations(problem4)
-        println("Nr of Configurations is: " + nrModels1)
-      }
-    } catch {
-      case e: ContradictionException => println("UnSAT ", e)
+//time {
+  try {
+    if (isConsistent(problem4)) {
+      // --- println("SAT! ")
+      nrModels1 = validConfigurations(problem4)
+      println("Nr of Configurations is: " + nrModels1)
     }
-
+  } catch {
+    case e: ContradictionException => println("UnSAT ", e)
+  }
+//}
 
     solver.clearLearntClauses()
     val problemAll: IProblem = reader.parseInstance("all_slices.cnf")
-
-    try {
-      if (isConsistent(problemAll)) {
-        // --- println("SAT! ")
-        nrModelsAll = validConfigurations(problemAll)
-        println("Nr of Configurations is: " + nrModelsAll)
-      }
-    } catch {
-      case e: ContradictionException => println("UnSAT ", e)
+//time {
+  try {
+    if (isConsistent(problemAll)) {
+      // --- println("SAT! ")
+      nrModelsAll = validConfigurations(problemAll)
+      println("Nr of Configurations is: " + nrModelsAll)
     }
+  } catch {
+    case e: ContradictionException => println("UnSAT ", e)
+  }
 
-    //assert(nrModels4 == nrModels1, "Equal")
-    if ((nrModels == nrModels1) & (nrModels == nrModelsAll) & (nrModels1 == nrModelsAll)) {
-      println("Models are Consistent to each other!", (nrModels1), nrModels, nrModelsAll)
-    } else {
-      println("Models are Inconsistent to each other!", (nrModels1), nrModels, nrModelsAll)
-    }
-
+  //assert(nrModels4 == nrModels1, "Equal")
+  if ((nrModels == nrModels1) & (nrModels == nrModelsAll) & (nrModels1 == nrModelsAll)) {
+    println("Models are Consistent with each other!", (nrModels1), nrModels, nrModelsAll)
+  } else {
+    println("Models are Inconsistent with each other!", (nrModels1), nrModels, nrModelsAll)
+  }
+//}
 }
 
 
