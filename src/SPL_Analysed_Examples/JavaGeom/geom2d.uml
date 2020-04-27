@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>math.geom2d</OriginalElement>
+  <nodes>
+    <node x="2998.1220779220766" y="1060.0">math.geom2d.circulinear.CircleLine2D</node>
+    <node x="1195.6429112554094" y="800.0">math.geom2d.circulinear.CirculinearCurveSet2D</node>
+    <node x="2341.0" y="1855.0">math.geom2d.circulinear.AllTests</node>
+    <node x="3725.1220779220766" y="1060.0">math.geom2d.conic.CircleArc2D</node>
+    <node x="3591.1220779220766" y="1060.0">math.geom2d.line.AbstractLine2D</node>
+    <node x="4651.372077922077" y="1060.0">math.geom2d.spline.QuadBezierCurve2D</node>
+    <node x="3756.351244588743" y="340.0">math.geom2d.curve.ContinuousCurve2D</node>
+    <node x="2844.2986050986055" y="1400.0">math.geom2d.conic.Circle2D</node>
+    <node x="1731.0" y="1630.0">math.geom2d.spline.QuadBezierCurve2DTest</node>
+    <node x="1524.0" y="1630.0">math.geom2d.conic.HyperbolaBranch2DTest</node>
+    <node x="2101.0" y="1855.0">math.geom2d.conic.AllTests</node>
+    <node x="1636.006938431939" y="540.0">math.geom2d.domain.Boundary2D</node>
+    <node x="1864.6012445887427" y="1290.0">math.geom2d.conic.Conics2D.ConicStraightLine2D</node>
+    <node x="1171.0" y="1780.0">math.geom2d.conic.CircleArc2DTest</node>
+    <node x="2350.0" y="1705.0">math.geom2d.polygon.convhull</node>
+    <node x="1589.0" y="1855.0">math.geom2d.Box2DTest</node>
+    <node x="3430.7470779220766" y="1150.0">math.geom2d.line.LineSegment2D</node>
+    <node x="3454.2470779220766" y="1060.0">math.geom2d.line.Line2D</node>
+    <node x="902.7679112554094" y="670.0">math.geom2d.point.PointSet2D</node>
+    <node x="740.0" y="1855.0">math.geom2d.conic.Circle2DTest</node>
+    <node x="2300.9970779220766" y="1400.0">math.geom2d.circulinear.GenericCirculinearRing2D</node>
+    <node x="909.6065476190463" y="1060.0">math.geom2d.polygon.HRectangle2D</node>
+    <node x="305.2679112554092" y="800.0">math.geom2d.circulinear.GenericCirculinearDomain2D</node>
+    <node x="2838.56488095238" y="670.0">math.geom2d.domain.Contour2D</node>
+    <node x="885.0" y="1855.0">math.geom2d.Point2DTest</node>
+    <node x="2109.131938431939" y="800.0">math.geom2d.circulinear.CirculinearContour2D</node>
+    <node x="566.0" y="1705.0">math.geom2d.domain.DomainArray2DTest</node>
+    <node x="4722.554016354015" y="450.0">math.geom2d.curve.SmoothCurve2D</node>
+    <node x="0.0" y="1930.0">math.geom2d.domain.AllTests</node>
+    <node x="5095.989135401635" y="450.0">math.geom2d.spline.GeneralPath2D.Type</node>
+    <node x="1007.0" y="1780.0">math.geom2d.polygon.Polygons2DTest</node>
+    <node x="1835.601244588743" y="1150.0">math.geom2d.conic.Conic2D</node>
+    <node x="2336.0" y="1630.0">math.geom2d.domain.GenericDomain2DTest</node>
+    <node x="3750.31488095238" y="1150.0">math.geom2d.line.Ray2D</node>
+    <node x="2581.0" y="1855.0">math.geom2d.point.AllTests</node>
+    <node x="1653.0" y="1780.0">math.geom2d.curve.GeneralPath2D</node>
+    <node x="2122.0" y="1780.0">math.geom2d.point.KDTree2DTest</node>
+    <node x="1495.0" y="1780.0">math.geom2d.circulinear.buffer</node>
+    <node x="0.0" y="1855.0">math.geom2d.geom2dTests</node>
+    <node x="1477.6429112554094" y="1150.0">math.geom2d.domain.ContourArray2D</node>
+    <node x="83.0" y="1555.0">math.geom2d.point.KDTree2D.XComparator</node>
+    <node x="5176.989135401635" y="450.0">math.geom2d.spline.GeneralPath2D.Segment</node>
+    <node x="833.3512445887427" y="80.0">math.geom2d.GeometricObject2D</node>
+    <node x="4387.530802068302" y="670.0">math.geom2d.curve.AbstractContinuousCurve2D</node>
+    <node x="4057.2470779220766" y="1060.0">math.geom2d.conic.EllipseArc2D</node>
+    <node x="624.5" y="1475.0">math.geom2d.curve.Curves2D</node>
+    <node x="1452.0" y="1855.0">math.geom2d.line.Line2DTest</node>
+    <node x="5000.489135401635" y="540.0">math.geom2d.spline.GeneralPath2D.LinearSegment</node>
+    <node x="927.0179112554094" y="800.0">math.geom2d.point.PointArray2D</node>
+    <node x="3527.4736050986057" y="800.0">math.geom2d.polygon.LinearCurve2D</node>
+    <node x="5265.489135401635" y="540.0">math.geom2d.spline.GeneralPath2D.MoveSegment</node>
+    <node x="657.1065476190463" y="800.0">math.geom2d.polygon.Polygon2D</node>
+    <node x="195.2099687349687" y="80.0">math.geom2d.transform.Bijection2D</node>
+    <node x="2275.0" y="1780.0">math.geom2d.domain.Boundaries2D</node>
+    <node x="1320.1429112554094" y="670.0">math.geom2d.circulinear.CirculinearBoundary2D</node>
+    <node x="150.0" y="1855.0">math.geom2d.Vector2DTest</node>
+    <node x="447.0" y="1855.0">math.geom2d.grid</node>
+    <node x="171.0" y="1780.0">math.geom2d.conic.Hyperbola2DTest</node>
+    <node x="2241.0" y="1475.0">math.geom2d.circulinear.CirculinearCurveArray2DTest</node>
+    <node x="1312.0" y="1855.0">math.geom2d.polygon.Polylines2D</node>
+    <node x="2176.0" y="1705.0">math.geom2d.domain.Boundaries2DTest</node>
+    <node x="358.0" y="1475.0">math.geom2d.circulinear.NonCirculinearShape2DException</node>
+    <node x="2223.9970779220766" y="1290.0">math.geom2d.circulinear.PolyCirculinearCurve2D</node>
+    <node x="452.0" y="1630.0">math.geom2d.ColinearPoints2DException</node>
+    <node x="1377.2315476190463" y="450.0">math.geom2d.circulinear.CirculinearCurve2D</node>
+    <node x="1967.0" y="1780.0">math.geom2d.line.LineArc2DTest</node>
+    <node x="1981.0" y="1855.0">math.geom2d.AllTests</node>
+    <node x="1678.3929112554094" y="1150.0">math.geom2d.conic.Conics2D</node>
+    <node x="299.0" y="1855.0">math.geom2d.conic.Ellipse2DTest</node>
+    <node x="510.0" y="1780.0">math.geom2d.polygon.Rectangle2DTest</node>
+    <node x="2026.8958333333337" y="1400.0">math.geom2d.circulinear.BoundaryPolyCirculinearCurve2D</node>
+    <node x="1289.0" y="1475.0">math.geom2d.circulinear.CirculinearContourArray2DTest</node>
+    <node x="1068.6429112554094" y="800.0">math.geom2d.curve.CurveArray2D</node>
+    <node x="442.0" y="170.0">math.geom2d.AffineTransform2D</node>
+    <node x="4485.030802068302" y="800.0">math.geom2d.curve.AbstractSmoothCurve2D</node>
+    <node x="146.0" y="170.0">math.geom2d.transform.CircleProjection2D</node>
+    <node x="626.6429112554094" y="1060.0">math.geom2d.polygon.Rectangle2D</node>
+    <node x="240.0" y="1930.0">math.geom2d.polygon.AllTests</node>
+    <node x="285.6429112554092" y="540.0">math.geom2d.domain.Domain2D</node>
+    <node x="3593.1220779220766" y="1150.0">math.geom2d.line.InvertedRay2D</node>
+    <node x="1098.3929112554094" y="670.0">math.geom2d.curve.CurveSet2D</node>
+    <node x="4177.247077922077" y="1060.0">math.geom2d.conic.ParabolaArc2D</node>
+    <node x="806.7679112554094" y="670.0">math.geom2d.Point2D</node>
+    <node x="3339.523605098606" y="800.0">math.geom2d.domain.SmoothContour2D</node>
+    <node x="92.5" y="1475.0">math.geom2d.point.KDTree2D</node>
+    <node x="5049.538744588743" y="340.0">math.geom2d.spline.GeneralPath2D</node>
+    <node x="746.6429112554094" y="1060.0">math.geom2d.polygon.SimplePolygon2D</node>
+    <node x="764.0" y="1475.0">math.geom2d.NonInvertibleTransform2DException</node>
+    <node x="4787.252380952379" y="1400.0">math.geom2d.conic.Ellipse2D</node>
+    <node x="1334.0" y="1780.0">math.geom2d.conic.Parabola2DTest</node>
+    <node x="2461.0" y="1855.0">math.geom2d.curve.AllTests</node>
+    <node x="1293.0" y="1705.0">math.geom2d.spline.GeneralPath2DTest</node>
+    <node x="935.0" y="1705.0">math.geom2d.conic.ParabolaArc2DTest</node>
+    <node x="120.0" y="1930.0">math.geom2d.transform.AllTests</node>
+    <node x="367.5" y="1555.0">math.geom2d.circulinear.NonCirculinearClassException</node>
+    <node x="2522.0" y="1705.0">math.geom2d.point.PointArray2DTest</node>
+    <node x="324.3512445887427" y="0.0">math.geom2d.transform.Transform2D</node>
+    <node x="2453.434577922076" y="260.0">math.geom2d.curve.Curve2D</node>
+    <node x="2533.0" y="1630.0">math.geom2d.polygon.SimplePolygon2DTest</node>
+    <node x="3219.2470779220766" y="670.0">math.geom2d.circulinear.CirculinearElement2D</node>
+    <node x="768.8849687349689" y="340.0">math.geom2d.circulinear.CirculinearShape2D</node>
+    <node x="1650.0" y="1705.0">math.geom2d.line.InvertedRay2DTest</node>
+    <node x="3103.6220779220766" y="450.0">math.geom2d.domain.ContinuousOrientedCurve2D</node>
+    <node x="1114.0" y="1705.0">math.geom2d.line.LinearShape2DTest</node>
+    <node x="490.3565476190465" y="800.0">math.geom2d.domain.DomainArray2D</node>
+    <node x="2578.0" y="1780.0">math.geom2d.curve.Curves2DTest</node>
+    <node x="594.0" y="1855.0">math.geom2d.Angle2DTest</node>
+    <node x="1114.8929112554094" y="1060.0">math.geom2d.circulinear.CirculinearCurveArray2D</node>
+    <node x="2472.0" y="1475.0">math.geom2d.spline.PolyCubicBezierCurve2DTest</node>
+    <node x="400.3512445887427" y="80.0">math.geom2d.transform.Projection2D</node>
+    <node x="1784.6012445887427" y="1290.0">math.geom2d.conic.Conic2D.Type</node>
+    <node x="893.0" y="1630.0">math.geom2d.domain.PolyOrientedCurve2DTest</node>
+    <node x="2427.2470779220766" y="1290.0">math.geom2d.circulinear.CirculinearRing2D</node>
+    <node x="4100.747077922077" y="1150.0">math.geom2d.line.LineArc2D</node>
+    <node x="913.75" y="540.0">math.geom2d.point.PointShape2D</node>
+    <node x="2086.131938431939" y="540.0">math.geom2d.circulinear.CirculinearContinuousCurve2D</node>
+    <node x="193.0" y="1705.0">math.geom2d.polygon.MultiPolygon2DTest</node>
+    <node x="1314.8929112554094" y="1290.0">math.geom2d.circulinear.CirculinearContourArray2D</node>
+    <node x="298.0" y="170.0">math.geom2d.transform.LineProjection2D</node>
+    <node x="2580.5720779220765" y="1290.0">math.geom2d.conic.EllipseShape2D</node>
+    <node x="0.0" y="1780.0">math.geom2d.polygon.LinearRing2DTest</node>
+    <node x="0.0" y="1705.0">math.geom2d.transform.CircleInversion2DTest</node>
+    <node x="511.7679112554092" y="670.0">math.geom2d.circulinear.CirculinearDomain2D</node>
+    <node x="226.0" y="1630.0">math.geom2d.circulinear.PolyCirculinearCurve2DTest</node>
+    <node x="1064.3512445887427" y="170.0">math.geom2d.Box2D</node>
+    <node x="2174.7986050986055" y="1150.0">math.geom2d.spline.PolyCubicBezierCurve2D</node>
+    <node x="2221.0" y="1855.0">math.geom2d.line.AllTests</node>
+    <node x="678.7679112554094" y="670.0">math.geom2d.ShapeArray2D</node>
+    <node x="3125.395833333334" y="800.0">math.geom2d.line.LinearElement2D</node>
+    <node x="5396.489135401635" y="540.0">math.geom2d.spline.GeneralPath2D.ClosingSegment</node>
+    <node x="677.0" y="1780.0">math.geom2d.conic.EllipseArc2DTest</node>
+    <node x="3710.2236050986057" y="800.0">math.geom2d.conic.CircularShape2D</node>
+    <node x="4870.489135401635" y="540.0">math.geom2d.spline.GeneralPath2D.QuadSegment</node>
+    <node x="1533.0" y="1475.0">math.geom2d.UnboundedShape2DException</node>
+    <node x="1857.0" y="1855.0">math.geom2d.Angle2D</node>
+    <node x="5133.489135401635" y="540.0">math.geom2d.spline.GeneralPath2D.CubicSegment</node>
+    <node x="614.0" y="1555.0">math.geom2d.curve.Curves2D.JunctionType</node>
+    <node x="2734.1220779220766" y="1290.0">math.geom2d.domain.BoundaryPolyCurve2D</node>
+    <node x="1822.8333333333335" y="540.0">math.geom2d.line.LinearShape2D</node>
+    <node x="2002.0" y="1705.0">math.geom2d.curve.CurveArray2DTest</node>
+    <node x="385.7679112554092" y="670.0">math.geom2d.domain.DomainSet2D</node>
+    <node x="843.0" y="1780.0">math.geom2d.point.PointSets2DTest</node>
+    <node x="4490.372077922077" y="1060.0">math.geom2d.spline.CubicBezierCurve2D</node>
+    <node x="4309.247077922077" y="1060.0">math.geom2d.conic.HyperbolaBranchArc2D</node>
+    <node x="3253.7470779220766" y="1060.0">math.geom2d.polygon.Polyline2D</node>
+    <node x="2304.855802068302" y="1060.0">math.geom2d.curve.PolyCurve2D</node>
+    <node x="169.39291125540922" y="1060.0">math.geom2d.polygon.MultiPolygon2D</node>
+    <node x="2504.43988095238" y="1400.0">math.geom2d.polygon.LinearRing2D</node>
+    <node x="3891.9970779220766" y="800.0">math.geom2d.conic.EllipseArcShape2D</node>
+    <node x="1316.0" y="1630.0">math.geom2d.spline.CubicBezierCurve2DTest</node>
+    <node x="1170.0" y="1855.0">math.geom2d.polygon.Polygons2D</node>
+    <node x="2139.0" y="1630.0">math.geom2d.circulinear.CirculinearDomains2D</node>
+    <node x="1035.0" y="1475.0">math.geom2d.circulinear.GenericCirculinearDomain2DTest</node>
+    <node x="3873.9970779220766" y="540.0">math.geom2d.domain.SmoothOrientedCurve2D</node>
+    <node x="2907.1220779220766" y="1290.0">math.geom2d.conic.Parabola2D</node>
+    <node x="962.3512445887427" y="170.0">math.geom2d.Vector2D</node>
+    <node x="360.0" y="1930.0">math.geom2d.spline.AllTests</node>
+    <node x="2008.0" y="1475.0">math.geom2d.line.DegeneratedLine2DException</node>
+    <node x="1028.0" y="1855.0">math.geom2d.point.PointSets2D</node>
+    <node x="1810.0" y="1780.0">math.geom2d.polygon.Polyline2DTest</node>
+    <node x="2427.0" y="1780.0">math.geom2d.conic.Conics2DTest</node>
+    <node x="751.0" y="1705.0">math.geom2d.line.LineSegment2DTest</node>
+    <node x="1472.0" y="1705.0">math.geom2d.line.StraightLine2DTest</node>
+    <node x="1723.0" y="1855.0">math.geom2d.line.Ray2DTest</node>
+    <node x="2358.7986050986055" y="1150.0">math.geom2d.domain.PolyOrientedCurve2D</node>
+    <node x="380.0" y="1705.0">math.geom2d.circulinear.CirculinearCurves2D</node>
+    <node x="208.0" y="1555.0">math.geom2d.point.KDTree2D.YComparator</node>
+    <node x="1634.8929112554094" y="1290.0">math.geom2d.conic.Conics2D.ConicTwoLines2D</node>
+    <node x="341.0" y="1780.0">math.geom2d.curve.PolyCurve2DTest</node>
+    <node x="3841.1220779220766" y="1060.0">math.geom2d.conic.HyperbolaBranch2D</node>
+    <node x="1937.0" y="1630.0">math.geom2d.AffineTransform2DTest</node>
+    <node x="3298.7470779220766" y="1150.0">math.geom2d.line.StraightLine2D</node>
+    <node x="0.0" y="170.0">math.geom2d.transform.CircleInversion2D</node>
+    <node x="2435.791666666667" y="340.0">math.geom2d.domain.OrientedCurve2D</node>
+    <node x="1772.0" y="1475.0">math.geom2d.circulinear.GenericCirculinearRing2DTest</node>
+    <node x="1511.8929112554094" y="1290.0">math.geom2d.conic.Hyperbola2D</node>
+    <node x="0.0" y="1555.0">math.geom2d.point.KDTree2D.Node</node>
+    <node x="1108.0" y="1630.0">math.geom2d.circulinear.CirculinearCurves2DTest</node>
+    <node x="1827.0" y="1705.0">math.geom2d.ShapeArray2DTest</node>
+    <node x="862.3512445887427" y="170.0">math.geom2d.Shape2D</node>
+    <node x="598.0" y="540.0">math.geom2d.ShapeSet2D</node>
+    <node x="209.89291125540922" y="670.0">math.geom2d.domain.GenericDomain2D</node>
+    <node x="673.0" y="1630.0">math.geom2d.domain.BoundaryPolyCurve2DTest</node>
+    <node x="0.0" y="1630.0">math.geom2d.UnboundedBox2DException</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="math.geom2d.spline.GeneralPath2D.MoveSegment" target="math.geom2d.spline.GeneralPath2D.Segment">
+      <point x="-27.75" y="-15.0" />
+      <point x="5293.239135401635" y="520.0" />
+      <point x="5233.689135401635" y="520.0" />
+      <point x="16.199999999999818" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.DomainArray2D" target="math.geom2d.ShapeArray2D">
+      <point x="29.5" y="-15.0" />
+      <point x="578.8565476190465" y="780.0" />
+      <point x="732.7679112554094" y="780.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.EllipseArc2D" target="math.geom2d.curve.AbstractSmoothCurve2D">
+      <point x="33.0" y="-15.0" />
+      <point x="4139.747077922077" y="1010.0" />
+      <point x="4546.905802068302" y="1010.0" />
+      <point x="-20.625" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.curve.CurveSet2D" target="math.geom2d.ShapeSet2D">
+      <point x="-23.75" y="-15.0" />
+      <point x="1122.1429112554094" y="600.0" />
+      <point x="682.0" y="600.0" />
+      <point x="36.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.ContourArray2D" target="math.geom2d.domain.Boundary2D">
+      <point x="30.0" y="-15.0" />
+      <point x="1567.6429112554094" y="650.0" />
+      <point x="1673.131938431939" y="650.0" />
+      <point x="-12.375" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.CircularShape2D" target="math.geom2d.domain.SmoothOrientedCurve2D">
+      <point x="30.25" y="-15.0" />
+      <point x="3800.9736050986057" y="640.0" />
+      <point x="3920.3859668109653" y="640.0" />
+      <point x="-37.11111111111131" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.CubicBezierCurve2D" target="math.geom2d.curve.AbstractSmoothCurve2D">
+      <point x="0.0" y="-15.0" />
+      <point x="4560.872077922077" y="1040.0" />
+      <point x="4588.155802068302" y="1040.0" />
+      <point x="20.625" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.ShapeArray2D" target="math.geom2d.ShapeSet2D">
+      <point x="0.0" y="-15.0" />
+      <point x="732.7679112554094" y="650.0" />
+      <point x="634.0" y="650.0" />
+      <point x="-12.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.Box2D" target="math.geom2d.GeometricObject2D">
+      <point x="0.0" y="-15.0" />
+      <point x="1097.8512445887427" y="140.0" />
+      <point x="957.5512445887427" y="140.0" />
+      <point x="55.200000000000045" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearCurveArray2D" target="math.geom2d.circulinear.CirculinearCurveSet2D">
+      <point x="41.0" y="-15.0" />
+      <point x="1237.8929112554094" y="1040.0" />
+      <point x="1271.6429112554094" y="1040.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearDomain2D" target="math.geom2d.domain.Domain2D">
+      <point x="-36.75" y="-15.0" />
+      <point x="548.5179112554092" y="640.0" />
+      <point x="364.3929112554092" y="640.0" />
+      <point x="33.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.QuadBezierCurve2D" target="math.geom2d.curve.SmoothCurve2D">
+      <point x="46.33333333333303" y="-15.0" />
+      <point x="4767.205411255409" y="1040.0" />
+      <point x="4859.989135401635" y="1040.0" />
+      <point x="4859.989135401635" y="520.0" />
+      <point x="4828.429016354015" y="520.0" />
+      <point x="45.375" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Conics2D.ConicStraightLine2D" target="math.geom2d.conic.Conics2D">
+      <point x="-47.33333333333326" y="-15.0" />
+      <point x="1888.2679112554097" y="1240.0" />
+      <point x="1741.3929112554094" y="1240.0" />
+      <point x="21.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Hyperbola2D" target="math.geom2d.conic.Conic2D">
+      <point x="25.75" y="-15.0" />
+      <point x="1589.1429112554094" y="1250.0" />
+      <point x="1842.1845779220762" y="1250.0" />
+      <point x="-32.91666666666674" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.LinearElement2D" target="math.geom2d.line.LinearShape2D">
+      <point x="-30.75" y="-15.0" />
+      <point x="3156.145833333334" y="750.0" />
+      <point x="2578.0248496873483" y="750.0" />
+      <point x="2578.0248496873483" y="630.0" />
+      <point x="1878.8333333333335" y="630.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.CircleArc2D" target="math.geom2d.circulinear.CirculinearElement2D">
+      <point x="-36.0" y="-15.0" />
+      <point x="3737.1220779220766" y="870.0" />
+      <point x="3484.0236050986055" y="870.0" />
+      <point x="3484.0236050986055" y="730.0" />
+      <point x="3322.847077922076" y="730.0" />
+      <point x="29.59999999999991" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.GeneralPath2D.QuadSegment" target="math.geom2d.spline.GeneralPath2D">
+      <point x="-27.5" y="-15.0" />
+      <point x="4897.989135401635" y="420.0" />
+      <point x="5057.538744588743" y="420.0" />
+      <point x="-48.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CircleLine2D" target="math.geom2d.circulinear.CirculinearContour2D">
+      <point x="-33.333333333333485" y="-15.0" />
+      <point x="3014.7887445887427" y="1020.0" />
+      <point x="2233.2986050986055" y="1020.0" />
+      <point x="49.666666666666515" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.EllipseShape2D" target="math.geom2d.domain.SmoothContour2D">
+      <point x="28.25" y="-15.0" />
+      <point x="2665.3220779220765" y="1260.0" />
+      <point x="3420.2470779220766" y="1260.0" />
+      <point x="3420.2470779220766" y="920.0" />
+      <point x="3423.273605098606" y="920.0" />
+      <point x="16.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.PolyCubicBezierCurve2D" target="math.geom2d.curve.PolyCurve2D">
+      <point x="0.0" y="-15.0" />
+      <point x="2256.7986050986055" y="1130.0" />
+      <point x="2330.355802068302" y="1130.0" />
+      <point x="-25.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.EllipseArc2D" target="math.geom2d.domain.SmoothOrientedCurve2D">
+      <point x="0.0" y="-15.0" />
+      <point x="4106.747077922077" y="960.0" />
+      <point x="4111.872077922077" y="960.0" />
+      <point x="4111.872077922077" y="650.0" />
+      <point x="3976.0526334776323" y="650.0" />
+      <point x="18.555555555555657" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearContour2D" target="math.geom2d.circulinear.CirculinearContinuousCurve2D">
+      <point x="0.0" y="-15.0" />
+      <point x="2183.631938431939" y="650.0" />
+      <point x="2168.631938431939" y="650.0" />
+      <point x="-16.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearDomain2D" target="math.geom2d.circulinear.CirculinearShape2D">
+      <point x="36.75" y="-15.0" />
+      <point x="622.0179112554092" y="630.0" />
+      <point x="496.0849687349687" y="630.0" />
+      <point x="496.0849687349687" y="520.0" />
+      <point x="707.8349687349687" y="520.0" />
+      <point x="707.8349687349687" y="430.0" />
+      <point x="782.5849687349689" y="430.0" />
+      <point x="-54.799999999999955" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.ContinuousOrientedCurve2D" target="math.geom2d.domain.OrientedCurve2D">
+      <point x="-46.75" y="-15.0" />
+      <point x="3150.3720779220766" y="410.0" />
+      <point x="2529.541666666667" y="410.0" />
+      <point x="31.25" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.ParabolaArc2D" target="math.geom2d.domain.SmoothOrientedCurve2D">
+      <point x="-28.0" y="-15.0" />
+      <point x="4205.247077922077" y="630.0" />
+      <point x="4013.1637445887427" y="630.0" />
+      <point x="55.666666666666515" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.polygon.LinearRing2D" target="math.geom2d.polygon.LinearCurve2D">
+      <point x="26.0" y="-15.0" />
+      <point x="2582.43988095238" y="1370.0" />
+      <point x="3580.6220779220766" y="1370.0" />
+      <point x="3580.6220779220766" y="930.0" />
+      <point x="3610.7236050986057" y="930.0" />
+      <point x="27.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.LineArc2D" target="math.geom2d.line.AbstractLine2D">
+      <point x="-22.0" y="-15.0" />
+      <point x="4122.747077922077" y="1120.0" />
+      <point x="3693.722077922076" y="1120.0" />
+      <point x="45.59999999999991" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.Boundary2D" target="math.geom2d.domain.OrientedCurve2D">
+      <point x="0.0" y="-15.0" />
+      <point x="1685.506938431939" y="520.0" />
+      <point x="1753.3333333333335" y="520.0" />
+      <point x="1753.3333333333335" y="410.0" />
+      <point x="2467.041666666667" y="410.0" />
+      <point x="-31.25" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearElement2D" target="math.geom2d.domain.SmoothOrientedCurve2D">
+      <point x="37.0" y="-15.0" />
+      <point x="3330.2470779220766" y="620.0" />
+      <point x="3883.274855699854" y="620.0" />
+      <point x="-74.22222222222217" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.curve.PolyCurve2D" target="math.geom2d.curve.ContinuousCurve2D">
+      <point x="25.5" y="-15.0" />
+      <point x="2381.355802068302" y="420.0" />
+      <point x="3773.976244588743" y="420.0" />
+      <point x="-52.875" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.point.PointSet2D" target="math.geom2d.point.PointShape2D">
+      <point x="23.0" y="-15.0" />
+      <point x="971.7679112554094" y="650.0" />
+      <point x="994.75" y="650.0" />
+      <point x="27.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Circle2D" target="math.geom2d.circulinear.CircleLine2D">
+      <point x="0.0" y="-15.0" />
+      <point x="2883.2986050986055" y="1350.0" />
+      <point x="3023.1220779220766" y="1350.0" />
+      <point x="-25.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.GeneralPath2D.Type" target="math.geom2d.spline.GeneralPath2D">
+      <point x="0.0" y="-15.0" />
+      <point x="5125.989135401635" y="430.0" />
+      <point x="5089.538744588743" y="430.0" />
+      <point x="-16.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.BoundaryPolyCurve2D" target="math.geom2d.domain.Contour2D">
+      <point x="38.25" y="-15.0" />
+      <point x="2848.8720779220766" y="1240.0" />
+      <point x="2834.3720779220766" y="1240.0" />
+      <point x="2834.3720779220766" y="780.0" />
+      <point x="2873.06488095238" y="780.0" />
+      <point x="-11.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.GeneralPath2D.LinearSegment" target="math.geom2d.spline.GeneralPath2D">
+      <point x="-28.25" y="-15.0" />
+      <point x="5028.739135401635" y="430.0" />
+      <point x="5073.538744588743" y="430.0" />
+      <point x="-32.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.curve.Curve2D" target="math.geom2d.Shape2D">
+      <point x="0.0" y="-15.0" />
+      <point x="2492.934577922076" y="240.0" />
+      <point x="932.3512445887427" y="240.0" />
+      <point x="30.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.Vector2D" target="math.geom2d.GeometricObject2D">
+      <point x="0.0" y="-15.0" />
+      <point x="1003.3512445887427" y="150.0" />
+      <point x="929.9512445887426" y="150.0" />
+      <point x="27.600000000000023" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.BoundaryPolyCirculinearCurve2D" target="math.geom2d.circulinear.CirculinearContinuousCurve2D">
+      <point x="-70.0" y="-15.0" />
+      <point x="2061.895833333334" y="1380.0" />
+      <point x="2060.872077922076" y="1380.0" />
+      <point x="2060.872077922076" y="640.0" />
+      <point x="2102.631938431939" y="640.0" />
+      <point x="-82.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.curve.AbstractSmoothCurve2D" target="math.geom2d.curve.AbstractContinuousCurve2D">
+      <point x="-41.25" y="-15.0" />
+      <point x="46.25" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.EllipseArcShape2D" target="math.geom2d.domain.SmoothOrientedCurve2D">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Conics2D.ConicTwoLines2D" target="math.geom2d.conic.Conic2D">
+      <point x="43.0" y="-15.0" />
+      <point x="1742.3929112554094" y="1260.0" />
+      <point x="1855.351244588743" y="1260.0" />
+      <point x="-19.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.polygon.LinearCurve2D" target="math.geom2d.circulinear.CirculinearContinuousCurve2D">
+      <point x="-27.75" y="-15.0" />
+      <point x="3555.2236050986057" y="590.0" />
+      <point x="2267.631938431939" y="590.0" />
+      <point x="82.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.SmoothOrientedCurve2D" target="math.geom2d.curve.SmoothCurve2D">
+      <point x="41.75" y="-15.0" />
+      <point x="3999.2470779220766" y="520.0" />
+      <point x="4737.679016354015" y="520.0" />
+      <point x="-45.375" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.CircleArc2D" target="math.geom2d.curve.AbstractSmoothCurve2D">
+      <point x="36.0" y="-15.0" />
+      <point x="3809.1220779220766" y="990.0" />
+      <point x="4519.405802068302" y="990.0" />
+      <point x="-48.125" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.GeneralPath2D.CubicSegment" target="math.geom2d.spline.GeneralPath2D">
+      <point x="-28.0" y="-15.0" />
+      <point x="5161.489135401635" y="500.0" />
+      <point x="5166.489135401635" y="500.0" />
+      <point x="5166.489135401635" y="420.0" />
+      <point x="5105.538744588743" y="420.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.point.KDTree2D.YComparator" target="math.geom2d.point.KDTree2D">
+      <point x="0.0" y="-15.0" />
+      <point x="260.5" y="1530.0" />
+      <point x="164.16666666666669" y="1530.0" />
+      <point x="28.666666666666686" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.polygon.SimplePolygon2D" target="math.geom2d.polygon.Polygon2D">
+      <point x="0.0" y="-15.0" />
+      <point x="810.6429112554094" y="1040.0" />
+      <point x="714.6065476190463" y="1040.0" />
+      <point x="11.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.AbstractLine2D" target="math.geom2d.domain.SmoothOrientedCurve2D">
+      <point x="0.0" y="-15.0" />
+      <point x="3648.1220779220766" y="950.0" />
+      <point x="3841.7236050986057" y="950.0" />
+      <point x="3841.7236050986057" y="650.0" />
+      <point x="3938.941522366521" y="650.0" />
+      <point x="-18.555555555555657" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.ContourArray2D" target="math.geom2d.curve.CurveArray2D">
+      <point x="-30.0" y="-15.0" />
+      <point x="1507.6429112554094" y="1130.0" />
+      <point x="1036.3929112554094" y="1130.0" />
+      <point x="1036.3929112554094" y="1040.0" />
+      <point x="1086.4762445887427" y="1040.0" />
+      <point x="-35.66666666666674" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearRing2D" target="math.geom2d.circulinear.CirculinearContour2D">
+      <point x="0.0" y="-15.0" />
+      <point x="2491.7470779220766" y="1230.0" />
+      <point x="2164.2986050986055" y="1230.0" />
+      <point x="2164.2986050986055" y="1040.0" />
+      <point x="2183.631938431939" y="1040.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.DomainSet2D" target="math.geom2d.ShapeSet2D">
+      <point x="26.5" y="-15.0" />
+      <point x="465.2679112554092" y="650.0" />
+      <point x="610.0" y="650.0" />
+      <point x="-36.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Parabola2D" target="math.geom2d.domain.Contour2D">
+      <point x="0.0" y="-15.0" />
+      <point x="2954.1220779220766" y="780.0" />
+      <point x="2896.06488095238" y="780.0" />
+      <point x="11.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.HyperbolaBranchArc2D" target="math.geom2d.curve.AbstractSmoothCurve2D">
+      <point x="39.5" y="-15.0" />
+      <point x="4427.747077922077" y="1030.0" />
+      <point x="4574.405802068302" y="1030.0" />
+      <point x="6.875" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.GeneralPath2D.MoveSegment" target="math.geom2d.spline.GeneralPath2D">
+      <point x="27.75" y="-15.0" />
+      <point x="5348.739135401635" y="400.0" />
+      <point x="5137.538744588743" y="400.0" />
+      <point x="32.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.HyperbolaBranch2D" target="math.geom2d.domain.SmoothContour2D">
+      <point x="-35.0" y="-15.0" />
+      <point x="3876.1220779220766" y="860.0" />
+      <point x="3456.773605098606" y="860.0" />
+      <point x="50.25" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.ParabolaArc2D" target="math.geom2d.curve.AbstractSmoothCurve2D">
+      <point x="28.0" y="-15.0" />
+      <point x="4261.247077922077" y="1020.0" />
+      <point x="4560.655802068302" y="1020.0" />
+      <point x="-6.875" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.transform.Bijection2D" target="math.geom2d.transform.Transform2D">
+      <point x="0.0" y="-15.0" />
+      <point x="242.2099687349687" y="55.0" />
+      <point x="350.1012445887427" y="55.0" />
+      <point x="-25.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.HyperbolaBranch2D" target="math.geom2d.curve.AbstractSmoothCurve2D">
+      <point x="35.0" y="-15.0" />
+      <point x="3946.1220779220766" y="1000.0" />
+      <point x="4533.155802068302" y="1000.0" />
+      <point x="-34.375" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.transform.LineProjection2D" target="math.geom2d.transform.Projection2D">
+      <point x="0.0" y="-15.0" />
+      <point x="360.0" y="150.0" />
+      <point x="476.8512445887427" y="150.0" />
+      <point x="25.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.CubicBezierCurve2D" target="math.geom2d.domain.ContinuousOrientedCurve2D">
+      <point x="-47.0" y="-15.0" />
+      <point x="4513.872077922077" y="850.0" />
+      <point x="3516.9736050986057" y="850.0" />
+      <point x="3516.9736050986057" y="520.0" />
+      <point x="3212.7054112554097" y="520.0" />
+      <point x="15.583333333333485" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.GeneralPath2D.Segment" target="math.geom2d.spline.GeneralPath2D">
+      <point x="0.0" y="-15.0" />
+      <point x="5217.489135401635" y="410.0" />
+      <point x="5121.538744588743" y="410.0" />
+      <point x="16.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.CircleArc2D" target="math.geom2d.conic.EllipseArcShape2D">
+      <point x="12.0" y="-15.0" />
+      <point x="3785.1220779220766" y="960.0" />
+      <point x="3924.7470779220766" y="960.0" />
+      <point x="-32.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.transform.CircleInversion2D" target="math.geom2d.transform.Bijection2D">
+      <point x="0.0" y="-15.0" />
+      <point x="63.0" y="130.0" />
+      <point x="218.7099687349687" y="130.0" />
+      <point x="-23.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.GenericCirculinearDomain2D" target="math.geom2d.domain.GenericDomain2D">
+      <point x="-46.75" y="-15.0" />
+      <point x="352.0179112554092" y="780.0" />
+      <point x="274.8929112554092" y="780.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.StraightLine2D" target="math.geom2d.line.AbstractLine2D">
+      <point x="37.0" y="-15.0" />
+      <point x="3391.2470779220766" y="1120.0" />
+      <point x="3602.5220779220763" y="1120.0" />
+      <point x="-45.59999999999991" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.GenericDomain2D" target="math.geom2d.domain.Domain2D">
+      <point x="0.0" y="-15.0" />
+      <point x="274.8929112554092" y="650.0" />
+      <point x="319.3929112554092" y="650.0" />
+      <point x="-11.25" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.LineSegment2D" target="math.geom2d.line.AbstractLine2D">
+      <point x="29.25" y="-15.0" />
+      <point x="3518.4970779220766" y="1130.0" />
+      <point x="3625.3220779220765" y="1130.0" />
+      <point x="-22.800000000000182" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.ContinuousOrientedCurve2D" target="math.geom2d.curve.ContinuousCurve2D">
+      <point x="46.75" y="-15.0" />
+      <point x="3243.8720779220766" y="430.0" />
+      <point x="3809.226244588743" y="430.0" />
+      <point x="-17.625" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.CircularShape2D" target="math.geom2d.circulinear.CirculinearElement2D">
+      <point x="-30.25" y="-15.0" />
+      <point x="3740.4736050986057" y="720.0" />
+      <point x="3352.4470779220765" y="720.0" />
+      <point x="59.19999999999982" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.ShapeSet2D" target="math.geom2d.Shape2D">
+      <point x="0.0" y="-15.0" />
+      <point x="646.0" y="510.0" />
+      <point x="696.8349687349687" y="510.0" />
+      <point x="696.8349687349687" y="230.0" />
+      <point x="892.3512445887427" y="230.0" />
+      <point x="-10.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearContour2D" target="math.geom2d.circulinear.CirculinearBoundary2D">
+      <point x="-49.666666666666515" y="-15.0" />
+      <point x="2133.9652717652725" y="780.0" />
+      <point x="1437.1429112554094" y="780.0" />
+      <point x="39.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Circle2D" target="math.geom2d.curve.AbstractSmoothCurve2D">
+      <point x="31.199999999999818" y="-15.0" />
+      <point x="2914.4986050986054" y="1380.0" />
+      <point x="4811.872077922077" y="1380.0" />
+      <point x="4811.872077922077" y="1000.0" />
+      <point x="4629.405802068302" y="1000.0" />
+      <point x="61.875" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.GeneralPath2D.QuadSegment" target="math.geom2d.spline.GeneralPath2D.Segment">
+      <point x="27.5" y="-15.0" />
+      <point x="4952.989135401635" y="510.0" />
+      <point x="5185.089135401636" y="510.0" />
+      <point x="-32.399999999999636" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.curve.AbstractContinuousCurve2D" target="math.geom2d.curve.ContinuousCurve2D">
+      <point x="0.0" y="-15.0" />
+      <point x="4480.030802068302" y="650.0" />
+      <point x="4712.054016354015" y="650.0" />
+      <point x="4712.054016354015" y="430.0" />
+      <point x="3844.476244588743" y="430.0" />
+      <point x="17.625" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.polygon.Rectangle2D" target="math.geom2d.polygon.Polygon2D">
+      <point x="0.0" y="-15.0" />
+      <point x="676.6429112554094" y="1040.0" />
+      <point x="691.6065476190463" y="1040.0" />
+      <point x="-11.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.point.PointArray2D" target="math.geom2d.point.PointSet2D">
+      <point x="-26.0" y="-15.0" />
+      <point x="953.0179112554094" y="780.0" />
+      <point x="948.7679112554094" y="780.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.NonCirculinearClassException" target="math.geom2d.circulinear.NonCirculinearShape2DException">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearCurveSet2D" target="math.geom2d.circulinear.CirculinearCurve2D">
+      <point x="38.0" y="-15.0" />
+      <point x="1309.6429112554094" y="510.0" />
+      <point x="1394.2315476190463" y="510.0" />
+      <point x="-51.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.PolyOrientedCurve2D" target="math.geom2d.curve.PolyCurve2D">
+      <point x="-37.0" y="-15.0" />
+      <point x="2395.7986050986055" y="1130.0" />
+      <point x="2381.355802068302" y="1130.0" />
+      <point x="25.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.OrientedCurve2D" target="math.geom2d.curve.Curve2D">
+      <point x="0.0" y="-15.0" />
+      <point x="2498.291666666667" y="320.0" />
+      <point x="2492.934577922076" y="320.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.CubicBezierCurve2D" target="math.geom2d.curve.SmoothCurve2D">
+      <point x="47.0" y="-15.0" />
+      <point x="4607.872077922077" y="1030.0" />
+      <point x="4798.179016354015" y="1030.0" />
+      <point x="15.125" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Ellipse2D" target="math.geom2d.conic.EllipseShape2D">
+      <point x="-20.25" y="-15.0" />
+      <point x="4807.502380952379" y="1340.0" />
+      <point x="2665.3220779220765" y="1340.0" />
+      <point x="28.25" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.curve.Curves2D.JunctionType" target="math.geom2d.curve.Curves2D">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.LineArc2D" target="math.geom2d.domain.SmoothOrientedCurve2D">
+      <point x="22.0" y="-15.0" />
+      <point x="4166.747077922077" y="640.0" />
+      <point x="3994.608189033188" y="640.0" />
+      <point x="37.11111111111131" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.GenericCirculinearDomain2D" target="math.geom2d.circulinear.CirculinearDomain2D">
+      <point x="46.75" y="-15.0" />
+      <point x="445.5179112554092" y="780.0" />
+      <point x="548.5179112554092" y="780.0" />
+      <point x="-36.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.Domain2D" target="math.geom2d.Shape2D">
+      <point x="0.0" y="-15.0" />
+      <point x="330.6429112554092" y="500.0" />
+      <point x="685.8349687349687" y="500.0" />
+      <point x="685.8349687349687" y="220.0" />
+      <point x="872.3512445887427" y="220.0" />
+      <point x="-30.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Circle2D" target="math.geom2d.circulinear.CirculinearRing2D">
+      <point x="-31.199999999999818" y="-15.0" />
+      <point x="2852.0986050986057" y="1360.0" />
+      <point x="2534.7470779220766" y="1360.0" />
+      <point x="43.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.BoundaryPolyCurve2D" target="math.geom2d.domain.PolyOrientedCurve2D">
+      <point x="-38.25" y="-15.0" />
+      <point x="2772.3720779220766" y="1210.0" />
+      <point x="2469.7986050986055" y="1210.0" />
+      <point x="37.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.PolyOrientedCurve2D" target="math.geom2d.domain.ContinuousOrientedCurve2D">
+      <point x="37.0" y="-15.0" />
+      <point x="2469.7986050986055" y="1130.0" />
+      <point x="2982.1220779220766" y="1130.0" />
+      <point x="2982.1220779220766" y="520.0" />
+      <point x="3181.5387445887427" y="520.0" />
+      <point x="-15.583333333333485" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.curve.ContinuousCurve2D" target="math.geom2d.curve.Curve2D">
+      <point x="0.0" y="-15.0" />
+      <point x="3826.851244588743" y="320.0" />
+      <point x="2508.7345779220764" y="320.0" />
+      <point x="15.800000000000182" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.Line2D" target="math.geom2d.curve.AbstractSmoothCurve2D">
+      <point x="17.5" y="-15.0" />
+      <point x="3506.7470779220766" y="970.0" />
+      <point x="4491.905802068302" y="970.0" />
+      <point x="-75.625" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.GeneralPath2D.LinearSegment" target="math.geom2d.spline.GeneralPath2D.Segment">
+      <point x="28.25" y="-15.0" />
+      <point x="5085.239135401635" y="520.0" />
+      <point x="5201.289135401636" y="520.0" />
+      <point x="-16.199999999999818" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.GeneralPath2D" target="math.geom2d.curve.Curve2D">
+      <point x="0.0" y="-15.0" />
+      <point x="5105.538744588743" y="310.0" />
+      <point x="2524.534577922076" y="310.0" />
+      <point x="31.59999999999991" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Circle2D" target="math.geom2d.conic.EllipseShape2D">
+      <point x="-15.599999999999909" y="-15.0" />
+      <point x="2867.698605098606" y="1350.0" />
+      <point x="2608.8220779220765" y="1350.0" />
+      <point x="-28.25" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.GeneralPath2D.CubicSegment" target="math.geom2d.spline.GeneralPath2D.Segment">
+      <point x="28.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CircleLine2D" target="math.geom2d.domain.SmoothContour2D">
+      <point x="33.333333333333485" y="-15.0" />
+      <point x="3081.4554112554097" y="910.0" />
+      <point x="3356.273605098606" y="910.0" />
+      <point x="-50.25" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CircleLine2D" target="math.geom2d.circulinear.CirculinearElement2D">
+      <point x="0.0" y="-15.0" />
+      <point x="3048.1220779220766" y="760.0" />
+      <point x="3234.047077922077" y="760.0" />
+      <point x="-59.19999999999982" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.polygon.LinearRing2D" target="math.geom2d.circulinear.CirculinearRing2D">
+      <point x="-26.0" y="-15.0" />
+      <point x="2530.43988095238" y="1380.0" />
+      <point x="2491.7470779220766" y="1380.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.AbstractLine2D" target="math.geom2d.line.LinearElement2D">
+      <point x="-38.0" y="-15.0" />
+      <point x="3610.1220779220766" y="880.0" />
+      <point x="3217.645833333334" y="880.0" />
+      <point x="30.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.polygon.MultiPolygon2D" target="math.geom2d.polygon.Polygon2D">
+      <point x="30.0" y="-15.0" />
+      <point x="259.3929112554092" y="1040.0" />
+      <point x="668.6065476190463" y="1040.0" />
+      <point x="-34.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.polygon.LinearCurve2D" target="math.geom2d.curve.AbstractContinuousCurve2D">
+      <point x="27.75" y="-15.0" />
+      <point x="3610.7236050986057" y="780.0" />
+      <point x="4433.780802068302" y="780.0" />
+      <point x="-46.25" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.SmoothContour2D" target="math.geom2d.domain.Contour2D">
+      <point x="-33.5" y="-15.0" />
+      <point x="3373.023605098606" y="740.0" />
+      <point x="2919.06488095238" y="740.0" />
+      <point x="34.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.curve.PolyCurve2D" target="math.geom2d.curve.CurveArray2D">
+      <point x="-25.5" y="-15.0" />
+      <point x="2330.355802068302" y="1030.0" />
+      <point x="1157.8095779220762" y="1030.0" />
+      <point x="35.66666666666674" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.QuadBezierCurve2D" target="math.geom2d.domain.ContinuousOrientedCurve2D">
+      <point x="0.0" y="-15.0" />
+      <point x="4720.872077922077" y="1020.0" />
+      <point x="4693.512349687348" y="1020.0" />
+      <point x="4693.512349687348" y="500.0" />
+      <point x="3275.0387445887427" y="500.0" />
+      <point x="77.91666666666652" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearCurveArray2D" target="math.geom2d.curve.CurveArray2D">
+      <point x="-41.0" y="-15.0" />
+      <point x="1155.8929112554094" y="1040.0" />
+      <point x="1122.1429112554094" y="1040.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Parabola2D" target="math.geom2d.curve.AbstractSmoothCurve2D">
+      <point x="31.333333333333485" y="-15.0" />
+      <point x="2985.4554112554097" y="1270.0" />
+      <point x="4800.872077922077" y="1270.0" />
+      <point x="4800.872077922077" y="1010.0" />
+      <point x="4615.655802068302" y="1010.0" />
+      <point x="48.125" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.BoundaryPolyCirculinearCurve2D" target="math.geom2d.circulinear.CirculinearContour2D">
+      <point x="0.0" y="-15.0" />
+      <point x="2131.895833333334" y="1380.0" />
+      <point x="2114.372077922076" y="1380.0" />
+      <point x="2114.372077922076" y="1040.0" />
+      <point x="2133.9652717652725" y="1040.0" />
+      <point x="-49.666666666666515" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.PolyCirculinearCurve2D" target="math.geom2d.circulinear.CirculinearContinuousCurve2D">
+      <point x="-39.75" y="-15.0" />
+      <point x="2263.7470779220766" y="1240.0" />
+      <point x="2071.872077922076" y="1240.0" />
+      <point x="2071.872077922076" y="650.0" />
+      <point x="2135.631938431939" y="650.0" />
+      <point x="-49.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.EllipseShape2D" target="math.geom2d.conic.Conic2D">
+      <point x="-28.25" y="-15.0" />
+      <point x="2608.8220779220765" y="1220.0" />
+      <point x="1894.851244588743" y="1220.0" />
+      <point x="19.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Conic2D.Type" target="math.geom2d.conic.Conic2D">
+      <point x="0.0" y="-15.0" />
+      <point x="1814.6012445887427" y="1270.0" />
+      <point x="1868.5179112554097" y="1270.0" />
+      <point x="-6.5833333333332575" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.polygon.Polygon2D" target="math.geom2d.circulinear.CirculinearDomain2D">
+      <point x="0.0" y="-15.0" />
+      <point x="703.1065476190463" y="770.0" />
+      <point x="622.0179112554092" y="770.0" />
+      <point x="36.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Conics2D.ConicStraightLine2D" target="math.geom2d.conic.Conic2D">
+      <point x="0.0" y="-15.0" />
+      <point x="1935.6012445887427" y="1230.0" />
+      <point x="1881.6845779220762" y="1230.0" />
+      <point x="6.5833333333332575" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Ellipse2D" target="math.geom2d.curve.AbstractSmoothCurve2D">
+      <point x="20.25" y="-15.0" />
+      <point x="4848.002380952379" y="990.0" />
+      <point x="4643.155802068302" y="990.0" />
+      <point x="75.625" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.point.KDTree2D.Node" target="math.geom2d.point.KDTree2D">
+      <point x="0.0" y="-15.0" />
+      <point x="31.5" y="1530.0" />
+      <point x="106.83333333333333" y="1530.0" />
+      <point x="-28.66666666666667" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.GeneralPath2D.ClosingSegment" target="math.geom2d.spline.GeneralPath2D.Segment">
+      <point x="-30.25" y="-15.0" />
+      <point x="5426.739135401635" y="510.0" />
+      <point x="5249.889135401635" y="510.0" />
+      <point x="32.399999999999636" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearBoundary2D" target="math.geom2d.circulinear.CirculinearCurve2D">
+      <point x="-39.0" y="-15.0" />
+      <point x="1359.1429112554094" y="520.0" />
+      <point x="1428.2315476190463" y="520.0" />
+      <point x="-17.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.AffineTransform2D" target="math.geom2d.GeometricObject2D">
+      <point x="33.75" y="-15.0" />
+      <point x="543.25" y="140.0" />
+      <point x="847.1512445887427" y="140.0" />
+      <point x="-55.200000000000045" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.Line2D" target="math.geom2d.line.LinearElement2D">
+      <point x="-17.5" y="-15.0" />
+      <point x="3471.7470779220766" y="890.0" />
+      <point x="3156.145833333334" y="890.0" />
+      <point x="-30.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.GeneralPath2D.ClosingSegment" target="math.geom2d.spline.GeneralPath2D">
+      <point x="30.25" y="-15.0" />
+      <point x="5487.239135401635" y="390.0" />
+      <point x="5153.538744588743" y="390.0" />
+      <point x="48.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Hyperbola2D" target="math.geom2d.domain.ContourArray2D">
+      <point x="-25.75" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearContour2D" target="math.geom2d.domain.Contour2D">
+      <point x="49.666666666666515" y="-15.0" />
+      <point x="2233.2986050986055" y="770.0" />
+      <point x="2850.06488095238" y="770.0" />
+      <point x="-34.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.point.KDTree2D.XComparator" target="math.geom2d.point.KDTree2D">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.SmoothOrientedCurve2D" target="math.geom2d.domain.ContinuousOrientedCurve2D">
+      <point x="-41.75" y="-15.0" />
+      <point x="3915.7470779220766" y="510.0" />
+      <point x="3243.8720779220766" y="510.0" />
+      <point x="46.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.Ray2D" target="math.geom2d.line.AbstractLine2D">
+      <point x="0.0" y="-15.0" />
+      <point x="3783.81488095238" y="1130.0" />
+      <point x="3670.922077922077" y="1130.0" />
+      <point x="22.800000000000182" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Conic2D" target="math.geom2d.domain.Boundary2D">
+      <point x="0.0" y="-15.0" />
+      <point x="1875.101244588743" y="650.0" />
+      <point x="1697.881938431939" y="650.0" />
+      <point x="12.375" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Circle2D" target="math.geom2d.conic.CircularShape2D">
+      <point x="15.599999999999909" y="-15.0" />
+      <point x="2898.898605098606" y="1360.0" />
+      <point x="3558.2470779220766" y="1360.0" />
+      <point x="3558.2470779220766" y="940.0" />
+      <point x="3740.4736050986057" y="940.0" />
+      <point x="-30.25" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.point.PointShape2D" target="math.geom2d.circulinear.CirculinearShape2D">
+      <point x="0.0" y="-15.0" />
+      <point x="967.75" y="420.0" />
+      <point x="837.3849687349689" y="420.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearContinuousCurve2D" target="math.geom2d.domain.ContinuousOrientedCurve2D">
+      <point x="49.5" y="-15.0" />
+      <point x="2234.631938431939" y="500.0" />
+      <point x="3119.2054112554097" y="500.0" />
+      <point x="-77.91666666666652" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.StraightLine2D" target="math.geom2d.circulinear.CircleLine2D">
+      <point x="-37.0" y="-15.0" />
+      <point x="3317.2470779220766" y="1130.0" />
+      <point x="3073.1220779220766" y="1130.0" />
+      <point x="25.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearCurveSet2D" target="math.geom2d.curve.CurveSet2D">
+      <point x="-38.0" y="-15.0" />
+      <point x="1233.6429112554094" y="780.0" />
+      <point x="1169.6429112554094" y="780.0" />
+      <point x="23.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.EllipseArc2D" target="math.geom2d.conic.EllipseArcShape2D">
+      <point x="-33.0" y="-15.0" />
+      <point x="4073.7470779220766" y="960.0" />
+      <point x="3990.2470779220766" y="960.0" />
+      <point x="32.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.polygon.Polyline2D" target="math.geom2d.circulinear.CirculinearContinuousCurve2D">
+      <point x="-22.5" y="-15.0" />
+      <point x="3276.2470779220766" y="900.0" />
+      <point x="2589.0248496873483" y="900.0" />
+      <point x="2589.0248496873483" y="620.0" />
+      <point x="2201.631938431939" y="620.0" />
+      <point x="16.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.GenericCirculinearRing2D" target="math.geom2d.circulinear.CirculinearRing2D">
+      <point x="42.25" y="-15.0" />
+      <point x="2427.7470779220766" y="1380.0" />
+      <point x="2448.7470779220766" y="1380.0" />
+      <point x="-43.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.spline.QuadBezierCurve2D" target="math.geom2d.curve.AbstractSmoothCurve2D">
+      <point x="-46.33333333333303" y="-15.0" />
+      <point x="4674.538744588743" y="1020.0" />
+      <point x="4601.905802068302" y="1020.0" />
+      <point x="34.375" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.polygon.MultiPolygon2D" target="math.geom2d.domain.Domain2D">
+      <point x="-30.0" y="-15.0" />
+      <point x="199.39291125540922" y="640.0" />
+      <point x="296.8929112554092" y="640.0" />
+      <point x="-33.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.polygon.Polyline2D" target="math.geom2d.polygon.LinearCurve2D">
+      <point x="22.5" y="-15.0" />
+      <point x="3321.2470779220766" y="930.0" />
+      <point x="3555.2236050986057" y="930.0" />
+      <point x="-27.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearContinuousCurve2D" target="math.geom2d.circulinear.CirculinearCurve2D">
+      <point x="-49.5" y="-15.0" />
+      <point x="2135.631938431939" y="500.0" />
+      <point x="1496.2315476190463" y="500.0" />
+      <point x="51.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.LinearElement2D" target="math.geom2d.circulinear.CirculinearElement2D">
+      <point x="30.75" y="-15.0" />
+      <point x="3217.645833333334" y="780.0" />
+      <point x="3293.2470779220766" y="780.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearBoundary2D" target="math.geom2d.domain.Boundary2D">
+      <point x="39.0" y="-15.0" />
+      <point x="1437.1429112554094" y="640.0" />
+      <point x="1648.381938431939" y="640.0" />
+      <point x="-37.125" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearShape2D" target="math.geom2d.Shape2D">
+      <point x="0.0" y="-15.0" />
+      <point x="837.3849687349689" y="240.0" />
+      <point x="912.3512445887427" y="240.0" />
+      <point x="10.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.curve.CurveArray2D" target="math.geom2d.curve.CurveSet2D">
+      <point x="0.0" y="-15.0" />
+      <point x="-23.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.Point2D" target="math.geom2d.GeometricObject2D">
+      <point x="-25.333333333333258" y="-15.0" />
+      <point x="819.4345779220762" y="620.0" />
+      <point x="587.5" y="620.0" />
+      <point x="587.5" y="150.0" />
+      <point x="874.7512445887428" y="150.0" />
+      <point x="-27.59999999999991" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.DomainSet2D" target="math.geom2d.domain.Domain2D">
+      <point x="-26.5" y="-15.0" />
+      <point x="412.2679112554092" y="650.0" />
+      <point x="341.8929112554092" y="650.0" />
+      <point x="11.25" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.transform.CircleProjection2D" target="math.geom2d.transform.Projection2D">
+      <point x="0.0" y="-15.0" />
+      <point x="212.0" y="140.0" />
+      <point x="425.8512445887427" y="140.0" />
+      <point x="-25.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.LinearShape2D" target="math.geom2d.circulinear.CirculinearCurve2D">
+      <point x="0.0" y="-15.0" />
+      <point x="1878.8333333333335" y="510.0" />
+      <point x="1462.2315476190463" y="510.0" />
+      <point x="17.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.CircleArc2D" target="math.geom2d.conic.CircularShape2D">
+      <point x="-12.0" y="-15.0" />
+      <point x="3761.1220779220766" y="940.0" />
+      <point x="3800.9736050986057" y="940.0" />
+      <point x="30.25" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearCurve2D" target="math.geom2d.curve.Curve2D">
+      <point x="34.0" y="-15.0" />
+      <point x="1479.2315476190463" y="320.0" />
+      <point x="2477.134577922076" y="320.0" />
+      <point x="-15.800000000000182" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.StraightLine2D" target="math.geom2d.domain.SmoothContour2D">
+      <point x="0.0" y="-15.0" />
+      <point x="3354.2470779220766" y="920.0" />
+      <point x="3389.773605098606" y="920.0" />
+      <point x="-16.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.Shape2D" target="math.geom2d.GeometricObject2D">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Parabola2D" target="math.geom2d.conic.Conic2D">
+      <point x="-31.333333333333485" y="-15.0" />
+      <point x="2922.7887445887427" y="1200.0" />
+      <point x="1908.0179112554097" y="1200.0" />
+      <point x="32.91666666666674" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.GenericCirculinearRing2D" target="math.geom2d.circulinear.PolyCirculinearCurve2D">
+      <point x="-42.25" y="-15.0" />
+      <point x="39.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearCurve2D" target="math.geom2d.circulinear.CirculinearShape2D">
+      <point x="-34.0" y="-15.0" />
+      <point x="1411.2315476190463" y="400.0" />
+      <point x="892.1849687349688" y="400.0" />
+      <point x="54.799999999999955" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.BoundaryPolyCirculinearCurve2D" target="math.geom2d.circulinear.PolyCirculinearCurve2D">
+      <point x="70.0" y="-15.0" />
+      <point x="2201.895833333334" y="1380.0" />
+      <point x="2263.7470779220766" y="1380.0" />
+      <point x="-39.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.LineSegment2D" target="math.geom2d.circulinear.CirculinearElement2D">
+      <point x="-29.25" y="-15.0" />
+      <point x="3459.9970779220766" y="1110.0" />
+      <point x="3108.6220779220766" y="1110.0" />
+      <point x="3108.6220779220766" y="770.0" />
+      <point x="3263.6470779220763" y="770.0" />
+      <point x="-29.59999999999991" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.curve.AbstractSmoothCurve2D" target="math.geom2d.curve.SmoothCurve2D">
+      <point x="41.25" y="-15.0" />
+      <point x="4608.780802068302" y="780.0" />
+      <point x="4787.179016354015" y="780.0" />
+      <point x="4787.179016354015" y="520.0" />
+      <point x="4767.929016354015" y="520.0" />
+      <point x="-15.125" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearContourArray2D" target="math.geom2d.circulinear.CirculinearBoundary2D">
+      <point x="-44.25" y="-15.0" />
+      <point x="-39.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearContourArray2D" target="math.geom2d.domain.ContourArray2D">
+      <point x="44.25" y="-15.0" />
+      <point x="1447.6429112554094" y="1270.0" />
+      <point x="1497.6429112554094" y="1270.0" />
+      <point x="-40.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.CirculinearElement2D" target="math.geom2d.circulinear.CirculinearContinuousCurve2D">
+      <point x="-37.0" y="-15.0" />
+      <point x="3256.2470779220766" y="600.0" />
+      <point x="2234.631938431939" y="600.0" />
+      <point x="49.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.point.PointSet2D" target="math.geom2d.ShapeSet2D">
+      <point x="-23.0" y="-15.0" />
+      <point x="925.7679112554094" y="610.0" />
+      <point x="658.0" y="610.0" />
+      <point x="12.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.Contour2D" target="math.geom2d.domain.Boundary2D">
+      <point x="-23.0" y="-15.0" />
+      <point x="2861.56488095238" y="610.0" />
+      <point x="1722.631938431939" y="610.0" />
+      <point x="37.125" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.InvertedRay2D" target="math.geom2d.line.AbstractLine2D">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.curve.SmoothCurve2D" target="math.geom2d.curve.ContinuousCurve2D">
+      <point x="0.0" y="-15.0" />
+      <point x="4783.054016354015" y="420.0" />
+      <point x="3879.726244588743" y="420.0" />
+      <point x="52.875" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.transform.Projection2D" target="math.geom2d.transform.Transform2D">
+      <point x="0.0" y="-15.0" />
+      <point x="451.3512445887427" y="55.0" />
+      <point x="401.6012445887427" y="55.0" />
+      <point x="25.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Conics2D.ConicTwoLines2D" target="math.geom2d.domain.ContourArray2D">
+      <point x="-43.0" y="-15.0" />
+      <point x="1656.3929112554094" y="1240.0" />
+      <point x="1577.6429112554094" y="1240.0" />
+      <point x="40.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.curve.CurveSet2D" target="math.geom2d.curve.Curve2D">
+      <point x="23.75" y="-15.0" />
+      <point x="1169.6429112554094" y="310.0" />
+      <point x="2461.3345779220763" y="310.0" />
+      <point x="-31.59999999999991" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.line.AbstractLine2D" target="math.geom2d.curve.AbstractSmoothCurve2D">
+      <point x="38.0" y="-15.0" />
+      <point x="3686.1220779220766" y="980.0" />
+      <point x="4505.655802068302" y="980.0" />
+      <point x="-61.875" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.DomainArray2D" target="math.geom2d.domain.DomainSet2D">
+      <point x="-29.5" y="-15.0" />
+      <point x="519.8565476190465" y="770.0" />
+      <point x="438.7679112554092" y="770.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Conics2D.ConicStraightLine2D" target="math.geom2d.line.StraightLine2D">
+      <point x="47.33333333333326" y="-15.0" />
+      <point x="1982.9345779220762" y="1250.0" />
+      <point x="3354.2470779220766" y="1250.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.point.PointArray2D" target="math.geom2d.circulinear.CirculinearShape2D">
+      <point x="26.0" y="-15.0" />
+      <point x="1005.0179112554094" y="780.0" />
+      <point x="1032.25" y="780.0" />
+      <point x="1032.25" y="410.0" />
+      <point x="864.784968734969" y="410.0" />
+      <point x="27.40000000000009" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.SmoothContour2D" target="math.geom2d.domain.SmoothOrientedCurve2D">
+      <point x="33.5" y="-15.0" />
+      <point x="3440.023605098606" y="770.0" />
+      <point x="3696.8720779220766" y="770.0" />
+      <point x="3696.8720779220766" y="630.0" />
+      <point x="3901.8304112554097" y="630.0" />
+      <point x="-55.666666666666515" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.Point2D" target="math.geom2d.circulinear.CirculinearShape2D">
+      <point x="0.0" y="-15.0" />
+      <point x="844.7679112554094" y="640.0" />
+      <point x="867.75" y="640.0" />
+      <point x="867.75" y="430.0" />
+      <point x="809.9849687349688" y="430.0" />
+      <point x="-27.40000000000009" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.Point2D" target="math.geom2d.point.PointShape2D">
+      <point x="25.33333333333337" y="-15.0" />
+      <point x="870.1012445887427" y="650.0" />
+      <point x="940.75" y="650.0" />
+      <point x="-27.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.HyperbolaBranchArc2D" target="math.geom2d.domain.SmoothOrientedCurve2D">
+      <point x="-39.5" y="-15.0" />
+      <point x="4348.747077922077" y="960.0" />
+      <point x="4289.559577922077" y="960.0" />
+      <point x="4289.559577922077" y="620.0" />
+      <point x="4031.7193001442984" y="620.0" />
+      <point x="74.22222222222217" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.AffineTransform2D" target="math.geom2d.transform.Bijection2D">
+      <point x="-33.75" y="-15.0" />
+      <point x="475.75" y="130.0" />
+      <point x="265.7099687349687" y="130.0" />
+      <point x="23.5" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.circulinear.PolyCirculinearCurve2D" target="math.geom2d.domain.PolyOrientedCurve2D">
+      <point x="39.75" y="-15.0" />
+      <point x="2343.2470779220766" y="1240.0" />
+      <point x="2395.7986050986055" y="1240.0" />
+      <point x="-37.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.domain.Contour2D" target="math.geom2d.domain.ContinuousOrientedCurve2D">
+      <point x="23.0" y="-15.0" />
+      <point x="2907.56488095238" y="510.0" />
+      <point x="3150.3720779220766" y="510.0" />
+      <point x="-46.75" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.conic.Conics2D.ConicTwoLines2D" target="math.geom2d.conic.Conics2D">
+      <point x="0.0" y="-15.0" />
+      <point x="-21.0" y="15.0" />
+    </edge>
+    <edge source="math.geom2d.polygon.HRectangle2D" target="math.geom2d.polygon.Polygon2D">
+      <point x="0.0" y="-15.0" />
+      <point x="964.1065476190463" y="1030.0" />
+      <point x="737.6065476190463" y="1030.0" />
+      <point x="34.5" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9098445595854923" x="1696.2169703872437" y="462.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
